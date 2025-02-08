@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc6688141722184d86feedff646b69b, type: 3}
+  m_Name: ProjectInfo
+  m_EditorClassIdentifier: 
+  description: "Characters/ -> \u30D7\u30EC\u30A4\u30E4\u30FC\u3084\u95D8\u725B\u306E\u30D7\u30EC\u30CF\u30D6\nEnviroment/
+    -> \u30B9\u30C6\u30FC\u30B8\u3084\u5468\u8FBA\u306E\u3046\u3093\u306C\u3093\u304B\u3093\u306C\u3093\u306A\u3069\u3001\u57FA\u672C\u52D5\u304B\u306A\u3044\u3082\u306E\nGame/
+    -> \u30AE\u30DF\u30C3\u30AF\u3068\u304B\u30A2\u30A4\u30C6\u30E0\u3068\u304B\u3001\u30B2\u30FC\u30E0\u306B\u95A2\u4FC2\u3042\u308B\u3082\u306E\uFF08\u30A2\u30D0\u30A6\u30C8\uFF09\nUI/
+    -> UI"
