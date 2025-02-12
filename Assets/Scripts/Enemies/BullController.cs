@@ -7,7 +7,6 @@ using UnityEngine;
 public class BullController : MonoBehaviour
 {
     public float Speed = 5f;
-    public Transform Player;
     private Vector3 direction;
 
     /// <summary>
@@ -19,12 +18,6 @@ public class BullController : MonoBehaviour
     {
         transform.position = spawnPosition;
         direction = (targetPosition - spawnPosition).normalized;
-    }
-
-    void Start()
-    {
-        // 実際にプレイヤーの方向へ向かうかのテスト用
-        Initialize(this.transform.position, Player.position);
     }
 
     void Update()
