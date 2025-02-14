@@ -7,7 +7,7 @@ using UnityEngine;
 public class BullController : MonoBehaviour
 {
     public float Speed = 5f;
-    private Vector3 direction;
+    protected Vector3 direction;
 
     /// <summary>
     /// 初期化
@@ -18,6 +18,9 @@ public class BullController : MonoBehaviour
     {
         transform.position = spawnPosition;
         direction = (targetPosition - spawnPosition).normalized;
+
+        //　闘牛を進行方向に向ける
+        transform.rotation = Quaternion.LookRotation(direction);
     }
 
     void Update()
