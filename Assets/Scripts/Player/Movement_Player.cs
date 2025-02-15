@@ -6,7 +6,8 @@ public class Movement_Player : Information_Player
     GameObject player;
     float moveSpeed;
     private List<KeyCode> pressedKeys = new List<KeyCode>();
-    private bool isAnyKeyPressed = false;
+    private bool isMoving = false;
+    private bool isGrounded;  
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,70 +21,97 @@ public class Movement_Player : Information_Player
     {
 
         // キーを押した順にリストに追加
-        if (Input.GetKeyDown(KeyCode.W) && !pressedKeys.Contains(KeyCode.W)) { pressedKeys.Add(KeyCode.W); isAnyKeyPressed = true; PicUpLastKeyList(); }
-        if (Input.GetKeyDown(KeyCode.S) && !pressedKeys.Contains(KeyCode.S)) { pressedKeys.Add(KeyCode.S); isAnyKeyPressed = true; PicUpLastKeyList(); }
-        if (Input.GetKeyDown(KeyCode.A) && !pressedKeys.Contains(KeyCode.A)) { pressedKeys.Add(KeyCode.A); isAnyKeyPressed = true; PicUpLastKeyList(); }
-        if (Input.GetKeyDown(KeyCode.D) && !pressedKeys.Contains(KeyCode.D)) { pressedKeys.Add(KeyCode.D); isAnyKeyPressed = true; PicUpLastKeyList(); }
+        if (Input.GetKeyDown(KeyCode.W)&&!pressedKeys.Contains(KeyCode.W)) { pressedKeys.Add(KeyCode.W); CalculateDirection(); }
+        if (Input.GetKeyDown(KeyCode.S)&&!pressedKeys.Contains(KeyCode.S)) { pressedKeys.Add(KeyCode.S); CalculateDirection(); }
+        if (Input.GetKeyDown(KeyCode.A)&&!pressedKeys.Contains(KeyCode.A)) { pressedKeys.Add(KeyCode.A); CalculateDirection(); }
+        if (Input.GetKeyDown(KeyCode.D)&&!pressedKeys.Contains(KeyCode.D)) { pressedKeys.Add(KeyCode.D); CalculateDirection(); }
 
         // キーを離したらリストから削除
-        if (Input.GetKeyUp(KeyCode.W)) { pressedKeys.Remove(KeyCode.W); PicUpLastKeyList(); }
-        if (Input.GetKeyUp(KeyCode.S)) { pressedKeys.Remove(KeyCode.S); PicUpLastKeyList(); }
-        if (Input.GetKeyUp(KeyCode.A)) { pressedKeys.Remove(KeyCode.A); PicUpLastKeyList(); }
-        if (Input.GetKeyUp(KeyCode.D)) { pressedKeys.Remove(KeyCode.D); PicUpLastKeyList(); }
+        if (pressedKeys.Contains(KeyCode.W)&&Input.GetKeyUp(KeyCode.W)) { pressedKeys.Remove(KeyCode.W); CalculateDirection(); }
+        if (pressedKeys.Contains(KeyCode.S)&&Input.GetKeyUp(KeyCode.S)) { pressedKeys.Remove(KeyCode.S); CalculateDirection(); }
+        if (pressedKeys.Contains(KeyCode.A)&&Input.GetKeyUp(KeyCode.A)) { pressedKeys.Remove(KeyCode.A); CalculateDirection(); }
+        if (pressedKeys.Contains(KeyCode.D)&&Input.GetKeyUp(KeyCode.D)) { pressedKeys.Remove(KeyCode.D); CalculateDirection(); }
 
-        //リストに存在している＝キーが押されている
+        //リストに存在している＝キーが押されている  
 
-
-        // 追加分：キーの組み合わせによる移動方向の変更
-        if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D)){rb.rotation = Quaternion.Euler(0, 45, 0);}
-        if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A)){rb.rotation = Quaternion.Euler(0, -45, 0);}
-        if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D)){rb.rotation = Quaternion.Euler(0, 135, 0);}  
-        if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A)){rb.rotation = Quaternion.Euler(0, -135, 0);}      
+        // ジャンプ処理
+        if ((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse4)) && isGrounded)
+        {
+            Jump();
+        }
 
         //シフトで移動速度を変更
-        if(Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            moveSpeed = playerDashSpeed;
-        }
-        if(Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            moveSpeed = playerSpeed;
-        }
+        moveSpeed = (Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3)) ? playerDashSpeed : playerSpeed;
         
     }
 
     void FixedUpdate()
     {
-        if (isAnyKeyPressed)
+        if (isMoving)
         {
             rb.MovePosition(rb.position + transform.forward * moveSpeed);
             
         }
     }
 
-    void PicUpLastKeyList()
+    //プレイヤーが向く方向を決定する関数
+    //押されたキーの状況が変化するたび呼ばれる
+     void CalculateDirection()
     {
-        // 押されているキーの中で最後のものを取得（リストの末尾）
-        if (pressedKeys.Count > 0)
+        
+
+        if (pressedKeys.Count >= 1)
         {
-            KeyCode lastPressedKey = pressedKeys[pressedKeys.Count - 1]; // 最後に押したキーを取得
-            switch (lastPressedKey)
+            //押されているキーをベクトル表現する
+            int registZ = 0,registX = 0;
+            if(pressedKeys.Contains(KeyCode.W)){registZ+=1;}
+            if(pressedKeys.Contains(KeyCode.S)){registZ-=1;}
+            if(pressedKeys.Contains(KeyCode.A)){registX-=1;}
+            if(pressedKeys.Contains(KeyCode.D)){registX+=1;}
+            //方向が０でない場合、プレイヤーの向きを変更し、移動開始する
+            if(new Vector3(registX, 0, registZ) !=Vector3.zero)
             {
-                case KeyCode.W: rb.rotation = Quaternion.Euler(0, 0, 0); break;
-                case KeyCode.S: rb.rotation = Quaternion.Euler(0, 180, 0); break;
-                case KeyCode.A: rb.rotation = Quaternion.Euler(0, -90, 0); break;
-                case KeyCode.D: rb.rotation = Quaternion.Euler(0, 90, 0); break;
+                rb.rotation = Quaternion.LookRotation(new Vector3(registX, 0, registZ));
+                isMoving = true;
             }
+            else
+            {
+
+                isMoving = false;
+            }
+            
+
+
         }
-        else
+        else if (pressedKeys.Count == 0)
         {
-            // 何も押されていないから停止
-            StopMoving();
+            isMoving = false;
         }
     }
     public void StopMoving()
     {
-        isAnyKeyPressed = false;
+        isMoving = false;
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+        {
+            isGrounded = true;  // 地面に接している場合
+        }
+    }
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+        {
+            isGrounded = false;  // 地面から離れた場合
+        }
+    }
+
+    void Jump()
+    {
+        // 上方向に力を加える
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
     public void LookAtEnemy(GameObject enemy)
     {
