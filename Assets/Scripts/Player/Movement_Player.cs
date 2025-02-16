@@ -5,9 +5,11 @@ public class Movement_Player : Information_Player
     Rigidbody rb;
     GameObject player;
     float moveSpeed;
+    public GameObject jumpSencor;
     private List<KeyCode> pressedKeys = new List<KeyCode>();
     private bool isMoving = false;
-    private bool isGrounded;  
+
+    public static bool isGrounded;  
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,19 +22,22 @@ public class Movement_Player : Information_Player
     void Update()
     {
 
-        // キーを押した順にリストに追加
-        if (Input.GetKeyDown(KeyCode.W)&&!pressedKeys.Contains(KeyCode.W)) { pressedKeys.Add(KeyCode.W); CalculateDirection(); }
-        if (Input.GetKeyDown(KeyCode.S)&&!pressedKeys.Contains(KeyCode.S)) { pressedKeys.Add(KeyCode.S); CalculateDirection(); }
-        if (Input.GetKeyDown(KeyCode.A)&&!pressedKeys.Contains(KeyCode.A)) { pressedKeys.Add(KeyCode.A); CalculateDirection(); }
-        if (Input.GetKeyDown(KeyCode.D)&&!pressedKeys.Contains(KeyCode.D)) { pressedKeys.Add(KeyCode.D); CalculateDirection(); }
+        int moveX = 0;
+        int moveZ = 0;
 
-        // キーを離したらリストから削除
-        if (pressedKeys.Contains(KeyCode.W)&&Input.GetKeyUp(KeyCode.W)) { pressedKeys.Remove(KeyCode.W); CalculateDirection(); }
-        if (pressedKeys.Contains(KeyCode.S)&&Input.GetKeyUp(KeyCode.S)) { pressedKeys.Remove(KeyCode.S); CalculateDirection(); }
-        if (pressedKeys.Contains(KeyCode.A)&&Input.GetKeyUp(KeyCode.A)) { pressedKeys.Remove(KeyCode.A); CalculateDirection(); }
-        if (pressedKeys.Contains(KeyCode.D)&&Input.GetKeyUp(KeyCode.D)) { pressedKeys.Remove(KeyCode.D); CalculateDirection(); }
+        if (Input.GetKey(KeyCode.W)) moveZ += 1;
+        if (Input.GetKey(KeyCode.S)) moveZ -= 1;
+        if (Input.GetKey(KeyCode.A)) moveX -= 1;
+        if (Input.GetKey(KeyCode.D)) moveX += 1;
 
-        //リストに存在している＝キーが押されている  
+        Vector3 direction = new Vector3(moveX, 0, moveZ).normalized;
+        isMoving = direction != Vector3.zero;
+
+        if (isMoving&&isGrounded)
+        {
+            rb.rotation = Quaternion.LookRotation(direction);
+        }
+
 
         // ジャンプ処理
         if ((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse4)) && isGrounded)
@@ -54,40 +59,6 @@ public class Movement_Player : Information_Player
         }
     }
 
-    //プレイヤーが向く方向を決定する関数
-    //押されたキーの状況が変化するたび呼ばれる
-     void CalculateDirection()
-    {
-        
-
-        if (pressedKeys.Count >= 1)
-        {
-            //押されているキーをベクトル表現する
-            int registZ = 0,registX = 0;
-            if(pressedKeys.Contains(KeyCode.W)){registZ+=1;}
-            if(pressedKeys.Contains(KeyCode.S)){registZ-=1;}
-            if(pressedKeys.Contains(KeyCode.A)){registX-=1;}
-            if(pressedKeys.Contains(KeyCode.D)){registX+=1;}
-            //方向が０でない場合、プレイヤーの向きを変更し、移動開始する
-            if(new Vector3(registX, 0, registZ) !=Vector3.zero)
-            {
-                rb.rotation = Quaternion.LookRotation(new Vector3(registX, 0, registZ));
-                isMoving = true;
-            }
-            else
-            {
-
-                isMoving = false;
-            }
-            
-
-
-        }
-        else if (pressedKeys.Count == 0)
-        {
-            isMoving = false;
-        }
-    }
     public void StopMoving()
     {
         isMoving = false;
@@ -98,6 +69,7 @@ public class Movement_Player : Information_Player
         if (collision.collider.CompareTag("Ground"))
         {
             isGrounded = true;  // 地面に接している場合
+
         }
     }
     void OnCollisionExit(Collision collision)
@@ -105,6 +77,7 @@ public class Movement_Player : Information_Player
         if (collision.collider.CompareTag("Ground"))
         {
             isGrounded = false;  // 地面から離れた場合
+            
         }
     }
 
@@ -112,6 +85,8 @@ public class Movement_Player : Information_Player
     {
         // 上方向に力を加える
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        GameObject sensor = Instantiate(jumpSencor,this.transform);
+        Destroy(sensor,0.3f);
     }
     public void LookAtEnemy(GameObject enemy)
     {
