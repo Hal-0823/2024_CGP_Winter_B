@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6880233956684232173}
   - component: {fileID: 1645023798472735553}
   m_Layer: 0
-  m_Name: sencerObject
+  m_Name: sencerMantObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,3 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf7074ff99a80a41a57b80f98ee6082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 6468593866292013704, guid: c51bde17ecc29b94d9bd3d77b7e6508b, type: 3}
