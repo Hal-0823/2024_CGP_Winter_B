@@ -15,6 +15,12 @@ public class DisplayScore : MonoBehaviour
         scoreManager = GetComponent<ScoreManager>();
         beforeScore = scoreManager.GetScore();
     }
+    void OnDestroy()
+    {
+        DeleteEffect();
+        scoreText.text = "";
+    }
+
 
 
     // Update is called once per frame
@@ -24,7 +30,6 @@ public class DisplayScore : MonoBehaviour
         if (residualScore>=10)
         {
             effectScoreText.text = "+" + residualScore;
-            effectScoreText.gameObject.SetActive(true);
             Invoke("DeleteEffect", 2.0f);
         }
         scoreText.text = "Score:" + scoreManager.GetScore();
@@ -33,7 +38,7 @@ public class DisplayScore : MonoBehaviour
     }
     void DeleteEffect()
     {
-        effectScoreText.gameObject.SetActive(false);
+        effectScoreText.text = "";
     }
     
 }
