@@ -2,26 +2,31 @@ using UnityEngine;
 
 public class Phase1 : MonoBehaviour, IGamePhase
 {
-    private float spawnInterval = 3f;
-    private float elapsedTime = 0f;
+    private float phaseDuration = 20f;  // フェーズの継続時間
+    private float spawnInterval = 3f;   // スポーンの間隔
+    private float spawnTimer = 0f; // スポーン用のタイマー
+    private float phaseStartTime;   // フェーズが開始したときの時間
     [SerializeField] private GameObject[] enemyPrefab;
 
     public void EnterState(PhaseManager manager)
     {
-        elapsedTime = 0f;
+        spawnTimer = 0f;
+
+        // EnterStateした時点での時間を代入
+        phaseStartTime += manager.gameTime;
     }
 
     public void UpdateState(PhaseManager manager)
     {
-        elapsedTime += Time.deltaTime;
+        spawnTimer += Time.deltaTime;
 
-        if (elapsedTime >= spawnInterval)
+        if (spawnTimer >= spawnInterval)
         {
             SpawnEnemy(manager);
-            elapsedTime = 0f;
+            spawnTimer = 0f;
         }
 
-        if (manager.gameTime > 20f)
+        if (manager.gameTime - phaseStartTime > phaseDuration)
         {
             manager.NextState();
         }
