@@ -4,16 +4,18 @@ public class Movement_Player : Information_Player
 {
     Rigidbody rb;
     GameObject player;
-    float moveSpeed;
     public GameObject jumpSencor;
-    private List<KeyCode> pressedKeys = new List<KeyCode>();
     private bool isMoving = false;
-
+    protected float moveSpeed;
+    public bool cantOperate = false;
+    bool jumpCoolTime;
     public static bool isGrounded;  
+    AnimationPlayer animationPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
+        animationPlayer = this.GetComponent<AnimationPlayer>();
         player = this.gameObject;
         moveSpeed = playerSpeed;
     }
@@ -24,38 +26,46 @@ public class Movement_Player : Information_Player
 
         int moveX = 0;
         int moveZ = 0;
-
+        
         if (Input.GetKey(KeyCode.W)) moveZ += 1;
         if (Input.GetKey(KeyCode.S)) moveZ -= 1;
         if (Input.GetKey(KeyCode.A)) moveX -= 1;
         if (Input.GetKey(KeyCode.D)) moveX += 1;
+        
 
         Vector3 direction = new Vector3(moveX, 0, moveZ).normalized;
-        isMoving = direction != Vector3.zero;
+        if(isGrounded&&!cantOperate)
+        {
+            isMoving = direction != Vector3.zero;
+            //シフトで移動速度を変更
+            moveSpeed = (Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3)) ? playerDashSpeed : playerSpeed;
+        }
+        
+        if(!isMoving||cantOperate)
+        {
+            animationPlayer.StopMoveAnimation();
+        }
 
-        if (isMoving&&isGrounded)
+        if (isMoving&&isGrounded&&!cantOperate)
         {
             rb.rotation = Quaternion.LookRotation(direction);
         }
 
 
         // ジャンプ処理
-        if ((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse4)) && isGrounded)
+        if ((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse4)) && isGrounded&&!jumpCoolTime&&!cantOperate)
         {
+            animationPlayer.JumpAnimation();
             Jump();
         }
-
-        //シフトで移動速度を変更
-        moveSpeed = (Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3)) ? playerDashSpeed : playerSpeed;
-        
     }
 
     void FixedUpdate()
     {
-        if (isMoving)
+        if (isMoving&&!cantOperate)
         {
+            animationPlayer.MoveAnimation(moveSpeed);
             rb.MovePosition(rb.position + transform.forward * moveSpeed);
-            
         }
     }
 
@@ -69,7 +79,6 @@ public class Movement_Player : Information_Player
         if (collision.collider.CompareTag("Ground"))
         {
             isGrounded = true;  // 地面に接している場合
-
         }
     }
     void OnCollisionExit(Collision collision)
@@ -85,9 +94,16 @@ public class Movement_Player : Information_Player
     {
         // 上方向に力を加える
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        jumpCoolTime = true;
         GameObject sensor = Instantiate(jumpSencor,this.transform);
         Destroy(sensor,0.3f);
+        Invoke("ResetJumpCoolTime",1.2f);
     }
+    void ResetJumpCoolTime()
+    {
+        jumpCoolTime = false;
+    }
+    
     public void LookAtEnemy(GameObject enemy)
     {
         Debug.Log("LookAtEnemyが呼び出されたよん");
