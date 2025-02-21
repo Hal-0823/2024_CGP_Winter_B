@@ -3,8 +3,8 @@ using TMPro;
 
 public class DisplayScore : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI effectScoreText;
+    private TextMeshProUGUI scoreText;
+    private TextMeshProUGUI effectScoreText;
     int beforeScore;
     ScoreManager scoreManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
