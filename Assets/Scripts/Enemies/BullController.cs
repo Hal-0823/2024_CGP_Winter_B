@@ -6,6 +6,8 @@ using UnityEngine;
 /// </summary>
 public class BullController : MonoBehaviour
 {
+    [Tooltip("壁に当たったときにどうなるか")]
+    public OnHitWallAction onHitWallAction;
     public float Speed = 5f;
     protected Vector3 direction;
 
@@ -34,5 +36,25 @@ public class BullController : MonoBehaviour
     protected virtual void Move()
     {
         transform.position += direction * Speed * Time.deltaTime;
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Wall"))
+        {
+            onHitWallAction?.Execute(this, collision);
+        }
+    }
+
+    public Vector3 GetDirection()
+    {
+        return direction;
+    }
+
+    public void SetDirection(Vector3 direction)
+    {
+        var n_dir = direction.normalized;
+        this.direction = n_dir;
+        transform.rotation = Quaternion.LookRotation(direction);
     }
 }
