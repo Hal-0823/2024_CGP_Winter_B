@@ -1351,7 +1351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453d27e86755a8540a9ba82712eb6fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
+  onHitWallAction: {fileID: 11400000, guid: 52432f3daff02404b9a8906ba6d0efa6, type: 2}
   Speed: 4
 --- !u!64 &1490320606489110446
 MeshCollider:
@@ -1442,7 +1442,7 @@ Rigidbody:
     m_Bits: 64
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
