@@ -9,9 +9,9 @@ public class CurveBull : BullController
     public float CurveAmount = 4f; // カーブの強さ
     public Vector3 CenterPosition; // ステージ中央の座標
 
-    public override void Initialize(Vector3 start, Vector3 end)
+    public override void Initialize(Vector3 start, Vector3 end, bool isSpawn = true)
     {
-        base.Initialize(start, end);
+        base.Initialize(start, end, isSpawn);
         GenerateCurvePath(start, end, Divisions, CurveAmount);
     }
 
