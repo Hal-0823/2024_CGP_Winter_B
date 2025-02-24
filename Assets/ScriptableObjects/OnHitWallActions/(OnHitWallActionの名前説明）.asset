@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc6688141722184d86feedff646b69b, type: 3}
+  m_Name: "(OnHitWallAction\u306E\u540D\u524D\u8AAC\u660E\uFF09"
+  m_EditorClassIdentifier: 
+  description: "Bounce_1_Explosion\n\u30FB\u53CD\u5C04\u30011\u56DE\u3001\u6700\u5F8C\u306F\u7206\u767A\u3059\u308B\n\nExplosion\n\u30FB\u7206\u767A\u3059\u308B"

@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: -2245264706496166430}
   - component: {fileID: -2175982189846767920}
   m_Layer: 6
-  m_Name: SplitBull
+  m_Name: SPLIT(1)_BULL(0)_E
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -969,12 +969,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6da54e2f28fcc49b091ec2fa283684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
+  onHitWallAction: {fileID: 0}
   Speed: 4
-  ChildBull: {fileID: 6672449617011189106, guid: 474072f8929a07f49b149b6ea6835a7d, type: 3}
+  ChildBull: {fileID: 6672449617011189106, guid: 2e7e7dd1031fd974a97c0ec8d8da0280, type: 3}
   SplitPoint: 2
-  SplitAngle: 60
-  SplitNum: 2
+  SplitAngle: 120
+  SplitNum: 3
 --- !u!64 &3736409877248043730
 MeshCollider:
   m_ObjectHideFlags: 0

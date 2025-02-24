@@ -779,7 +779,7 @@ GameObject:
   - component: {fileID: 7349406121038871154}
   - component: {fileID: 5056809742606053445}
   m_Layer: 6
-  m_Name: CurveBull
+  m_Name: CURVE(1)_E
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
-  Speed: 4
+  Speed: 5
   PathPoints: []
   Divisions: 64
   CurveAmount: 4

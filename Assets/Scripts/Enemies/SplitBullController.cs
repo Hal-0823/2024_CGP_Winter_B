@@ -12,9 +12,9 @@ public class SplitBullController : BullController
     private Vector3 splitPosition;
     private bool canSplit = false;
 
-    public override void Initialize(Vector3 start, Vector3 end)
+    public override void Initialize(Vector3 start, Vector3 end, bool isSpawn = true)
     {
-        base.Initialize(start, end);
+        base.Initialize(start, end, isSpawn);
         GenerateSplitPosition(start, end, SplitPoint);
         canSplit = true;
     }
@@ -34,7 +34,7 @@ public class SplitBullController : BullController
             float angle = startAngle + (i * angleStep);
             Vector3 spawnAngle = Quaternion.Euler(0, angle, 0) * transform.forward;
             BullController bull = Instantiate(ChildBull);
-            bull.Initialize(this.transform.position, this.transform.position + spawnAngle);
+            bull.Initialize(this.transform.position, this.transform.position + spawnAngle, false);
         }
 
         Destroy(this.gameObject);

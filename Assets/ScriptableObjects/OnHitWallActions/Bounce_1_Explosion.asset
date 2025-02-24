@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f20f562d4623d8d40806d33c3a85e579, type: 3}
-  m_Name: Bounce_1
+  m_Name: Bounce_1_Explosion
   m_EditorClassIdentifier: 
   maxBounces: 1
+  endBounceAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}

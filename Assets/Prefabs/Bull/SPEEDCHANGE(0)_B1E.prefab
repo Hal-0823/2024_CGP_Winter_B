@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 71053185635762281}
   - component: {fileID: 5360947821156774652}
   m_Layer: 6
-  m_Name: SpeedChangeBull
+  m_Name: SPEEDCHANGE(0)_B1E
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0af563157dec8a4783f726ad5e9eb5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
+  onHitWallAction: {fileID: 11400000, guid: 52432f3daff02404b9a8906ba6d0efa6, type: 2}
   Speed: 4
 --- !u!64 &-5087923182458140798
 MeshCollider:
