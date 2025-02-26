@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SplitBullController : BullController
+public class SplitBull : BullController
 {
     public BullController ChildBull;
     

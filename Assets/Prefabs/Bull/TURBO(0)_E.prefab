@@ -1311,13 +1311,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 460940324560377422}
-  - component: {fileID: 6672449617011189106}
+  - component: {fileID: 8141513697611783870}
   - component: {fileID: 1490320606489110446}
   - component: {fileID: 518687639245032948}
   - component: {fileID: 2669454093847251273}
-  - component: {fileID: 5308652734147280531}
   m_Layer: 6
-  m_Name: BULL(0)_B1E
+  m_Name: TURBO(0)_E
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1333,14 +1332,14 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6392230474802058361}
   - {fileID: 4917056504164145939}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &6672449617011189106
+--- !u!114 &8141513697611783870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1349,11 +1348,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8959187461258574251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 453d27e86755a8540a9ba82712eb6fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: b5baf45c26e523a478da2108206f828b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHitWallAction: {fileID: 11400000, guid: 52432f3daff02404b9a8906ba6d0efa6, type: 2}
-  Speed: 4
+  onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
+  Speed: 17
+  chargeTime: 1.5
+  WarningLine: {fileID: 3454628748291329664, guid: a94db0115bb8b8d4bb5086b7fc93ce9f, type: 3}
 --- !u!64 &1490320606489110446
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1448,28 +1449,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!95 &5308652734147280531
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8959187461258574251}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b5305397300fe8f469df89a361f47f06, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9166865997365107774
 GameObject:
   m_ObjectHideFlags: 0
