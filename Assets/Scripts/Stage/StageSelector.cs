@@ -1,11 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// ステージ選択画面を処理するクラス
 /// </summary>
 public class StageSelector : MonoBehaviour
 {
-    public GameObject[] StageObj;
+    public StageInfo[] Stage;
+    public TextMeshProUGUI StageNameText;
+    public TextMeshProUGUI BestScoreText;
+    public Image BackGroundImage;
     private int selectId;
     private float rotationSpeed;
 
@@ -14,17 +19,19 @@ public class StageSelector : MonoBehaviour
         selectId = 0;
         rotationSpeed = 20.0f;
 
-        for (int i=0; i<StageObj.Length; i++)
+        for (int i=0; i<Stage.Length; i++)
         {
             if (i == selectId)
             {
-                StageObj[i].SetActive(true);
+                Stage[i].gameObject.SetActive(true);
             }
             else
             {
-                StageObj[i].SetActive(false);
+                Stage[i].gameObject.SetActive(false);
             }
         }
+
+        ApplyStageInfo();
     }
 
     private void Update()
@@ -37,11 +44,18 @@ public class StageSelector : MonoBehaviour
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
     }
 
+    private void ApplyStageInfo()
+    {
+        StageNameText.text = Stage[selectId].StageName;
+        BestScoreText.text = $"BestScore:{Stage[selectId].BestScore}";
+        BackGroundImage.color = Stage[selectId].ThemeColor;
+    }
+
     public void NextStage()
     {
-        StageObj[selectId].SetActive(false);
+        Stage[selectId].gameObject.SetActive(false);
 
-        if (selectId + 1 >= StageObj.Length)
+        if (selectId + 1 >= Stage.Length)
         {
             selectId = 0;
         }
@@ -50,22 +64,26 @@ public class StageSelector : MonoBehaviour
             selectId++;
         }
 
-        StageObj[selectId].SetActive(true);
+        Stage[selectId].gameObject.SetActive(true);
+        ApplyStageInfo();
+        transform.rotation = Quaternion.identity;
     }
 
     public void BackStage()
     {
-        StageObj[selectId].SetActive(false);
+        Stage[selectId].gameObject.SetActive(false);
 
         if (selectId - 1 < 0)
         {
-            selectId = StageObj.Length - 1;
+            selectId = Stage.Length - 1;
         }
         else
         {
             selectId--;
         }
 
-        StageObj[selectId].SetActive(true);
+        Stage[selectId].gameObject.SetActive(true);
+        ApplyStageInfo();
+        transform.rotation = Quaternion.identity;
     }
 }

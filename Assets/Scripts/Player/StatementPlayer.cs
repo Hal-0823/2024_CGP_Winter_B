@@ -8,8 +8,8 @@ public class StatementPlayer : Information_Player
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animationPlayer = this.GetComponent<AnimationPlayer>();
-        movement_Player = this.GetComponent<Movement_Player>();
+        animationPlayer = this.GetComponentInParent<AnimationPlayer>();
+        movement_Player = this.GetComponentInParent<Movement_Player>();
     }
 
     // Update is called once per frame
@@ -17,9 +17,9 @@ public class StatementPlayer : Information_Player
     {
         
     }
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider col)
     {
-        if (collision.collider.CompareTag("Enemy")&&!gotDamage)
+        if (col.CompareTag("Enemy")&&!gotDamage)
         {
             HP -= 1;
             Debug.Log("HP: " + HP);
