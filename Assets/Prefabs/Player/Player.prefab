@@ -378,6 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSencor: {fileID: 1157579519682409022, guid: 50b9524d6271d9f43a148f924a7605e7, type: 3}
+  rollSencor: {fileID: 5291243642516263391, guid: 012a33c91d04e434fb76a337ab5f57f5, type: 3}
   cantOperate: 0
 --- !u!136 &3708423376452713378
 CapsuleCollider:

@@ -22,6 +22,10 @@ public class AnimationPlayer : Information_Player
         anim.SetTrigger("jump");
     }
 
+    public void RollingAnimation()
+    {
+        anim.SetTrigger("Roll");
+    }
     public void MoveAnimation(float moveSpeed)
     {
         if (moveSpeed == playerSpeed)

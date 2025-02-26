@@ -26,6 +26,7 @@ public class StatementPlayer : Information_Player
             animationPlayer.DamageAnimation();
             gotDamage = true;
             movement_Player.cantOperate = true;
+            movement_Player.StopMoving();
             if (HP <= 0)
             {
                 animationPlayer.DeathAnimation();
@@ -39,7 +40,10 @@ public class StatementPlayer : Information_Player
     }
     void endDamage()
     {
-        gotDamage = false;
-        movement_Player.cantOperate = false;
+        if(HP>0)
+        {
+            gotDamage = false;
+            movement_Player.cantOperate = false;
+        }
     }
 }
