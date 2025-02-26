@@ -3,6 +3,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public int score = 0; // スコア
+    private int timeScore = 0;
     float time = 0;
     public bool isCountScore = false;
     HighScore highScore; 
@@ -28,7 +29,7 @@ public class ScoreManager : MonoBehaviour
             time += Time.deltaTime;
             if(time>=1)
             {
-                score += 1;
+                timeScore += 1;
                 time = 0;
             }
 

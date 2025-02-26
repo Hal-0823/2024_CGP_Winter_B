@@ -22,7 +22,12 @@ public class Sensor : MonoBehaviour
             if(!Movement_Player.isGrounded&&GameObject.Find("ScoreManager(Clone)"))
             {
                 scoreManager = GameObject.Find("ScoreManager(Clone)").GetComponent<ScoreManager>();
-                scoreManager.PlusScore(10);
+                scoreManager.PlusScore(1000);
+            }
+            if(this.gameObject.tag == "RollSensor")
+            {
+                scoreManager = GameObject.Find("ScoreManager(Clone)").GetComponent<ScoreManager>();
+                scoreManager.PlusScore(1000);
             }
         }
     }
