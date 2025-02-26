@@ -5,6 +5,7 @@ public class Movement_Player : Information_Player
     Rigidbody rb;
     GameObject player;
     public GameObject jumpSencor;
+    public GameObject rollSencor;
     private bool isMoving = false;
     protected float moveSpeed;
     public bool cantOperate = false;
@@ -38,7 +39,17 @@ public class Movement_Player : Information_Player
         {
             isMoving = direction != Vector3.zero;
             //シフトで移動速度を変更
-            moveSpeed = (Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3)) ? playerDashSpeed : playerSpeed;
+            if((Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3))&&!cantOperate)
+            {
+                cantOperate = true;
+                animationPlayer.RollingAnimation();
+                moveSpeed = playerRollSpeed;
+                isMoving = true;
+                GameObject sensor = Instantiate(rollSencor,this.transform);
+                Destroy(sensor,0.3f);
+                Invoke("EndRolling",0.85f);
+                
+            }
         }
         
         if(!isMoving||cantOperate)
@@ -62,7 +73,7 @@ public class Movement_Player : Information_Player
 
     void FixedUpdate()
     {
-        if (isMoving&&!cantOperate)
+        if (isMoving)
         {
             animationPlayer.MoveAnimation(moveSpeed);
             rb.MovePosition(rb.position + transform.forward * moveSpeed);
@@ -89,7 +100,7 @@ public class Movement_Player : Information_Player
             
         }
     }
-
+    
     void Jump()
     {
         // 上方向に力を加える
@@ -98,6 +109,14 @@ public class Movement_Player : Information_Player
         GameObject sensor = Instantiate(jumpSencor,this.transform);
         Destroy(sensor,0.3f);
         Invoke("ResetJumpCoolTime",1.2f);
+    }
+    void EndRolling()
+    {
+        moveSpeed = playerSpeed;
+        if(isMoving)
+        {
+            cantOperate = false;
+        }
     }
     void ResetJumpCoolTime()
     {
