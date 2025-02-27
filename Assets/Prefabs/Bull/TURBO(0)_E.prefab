@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
-  Speed: 17
+  Speed: 20
   chargeTime: 1.5
   WarningLine: {fileID: 3454628748291329664, guid: a94db0115bb8b8d4bb5086b7fc93ce9f, type: 3}
 --- !u!64 &1490320606489110446
