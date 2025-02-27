@@ -1076,16 +1076,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4065838313217311039, guid: 9b3a57183483caa4bbe7f654623a55f9, type: 3}
   m_PrefabInstance: {fileID: 7127348413768054624}
   m_PrefabAsset: {fileID: 0}
-
-  m_GameObject: {fileID: 1075787004}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.9290967, y: 1, z: 2.8701258}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 349150969}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1095029830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,7 +1121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   STAR: 0
-
 --- !u!1 &1368633248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,9 +1591,9 @@ MonoBehaviour:
   - {fileID: 936405069}
   playerPosition: {fileID: 0}
   PhaseList:
-  - {fileID: 1980517541}
-  - {fileID: 1368633250}
-  - {fileID: 1709539916}
+  - {fileID: 750704894}
+  - {fileID: 750704894}
+  - {fileID: 750704894}
   - {fileID: 750704894}
 --- !u!4 &1837175405
 Transform:

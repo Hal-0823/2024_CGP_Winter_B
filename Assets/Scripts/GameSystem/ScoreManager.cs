@@ -5,6 +5,7 @@ public class ScoreManager : MonoBehaviour
     public int score = 0; // スコア
     private int timeScore = 0;
     float time = 0;
+    private float comboNum = 0;
     public bool isCountScore = false;
     HighScore highScore; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -41,8 +42,16 @@ public class ScoreManager : MonoBehaviour
     {
         if(isCountScore)
         {
-            score += value;
-            Debug.Log("加点");
+            if(value>0)
+            {
+                Debug.Log("現在コンボ数: " + comboNum);
+                score += (int)(value * (1.0f + (comboNum * 0.25f)));
+                comboNum++;
+            }
+            else
+            {
+                comboNum = 0;
+            }
         }
     }
 

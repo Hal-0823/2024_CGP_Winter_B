@@ -7,8 +7,8 @@ TagManager:
   - Enemy
   - Ground
   - Wall
-  - RollSensor
   - SpawnArea
+  - EscapeSensor
   layers:
   - Default
   - TransparentFX
