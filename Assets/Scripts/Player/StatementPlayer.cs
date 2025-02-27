@@ -25,6 +25,7 @@ public class StatementPlayer : Information_Player
             Debug.Log("HP: " + HP);
             animationPlayer.DamageAnimation();
             gotDamage = true;
+            movement_Player.GotDamage();
             movement_Player.cantOperate = true;
             movement_Player.StopMoving();
             if (HP <= 0)

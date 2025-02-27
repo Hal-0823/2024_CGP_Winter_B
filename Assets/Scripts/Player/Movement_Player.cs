@@ -11,6 +11,7 @@ public class Movement_Player : Information_Player
     public bool cantOperate = false;
     bool jumpCoolTime;
     public static bool isGrounded;  
+    GameObject sensor;
     AnimationPlayer animationPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,10 +44,9 @@ public class Movement_Player : Information_Player
             {
                 cantOperate = true;
                 animationPlayer.RollingAnimation();
-                moveSpeed = playerRollSpeed;
+                
                 isMoving = true;
-                GameObject sensor = Instantiate(rollSencor,this.transform);
-                Destroy(sensor,0.3f);
+                Invoke("Rolling",0.21f);
                 Invoke("EndRolling",0.85f);
                 
             }
@@ -85,6 +85,13 @@ public class Movement_Player : Information_Player
         isMoving = false;
     }
 
+    void Rolling()
+    {
+        moveSpeed = playerRollSpeed;
+        sensor = Instantiate(rollSencor,this.transform);
+        Destroy(sensor,0.3f);
+    }
+
     void OnCollisionStay(Collision collision)
     {
         if (collision.collider.CompareTag("Ground"))
@@ -100,13 +107,19 @@ public class Movement_Player : Information_Player
             
         }
     }
+
+    public void GotDamage()
+    {
+        if(sensor!=null)
+        sensor.GetComponent<SensorParent>().isBanned = true;
+    }
     
     void Jump()
     {
         // 上方向に力を加える
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         jumpCoolTime = true;
-        GameObject sensor = Instantiate(jumpSencor,this.transform);
+        sensor = Instantiate(jumpSencor,this.transform);
         Destroy(sensor,0.3f);
         Invoke("ResetJumpCoolTime",1.2f);
     }

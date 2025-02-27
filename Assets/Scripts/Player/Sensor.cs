@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Sensor : MonoBehaviour
 {
-    public ScoreManager scoreManager;
+    SensorParent parent;
     bool isMant;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        parent = GetComponentInParent<SensorParent>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -19,16 +19,22 @@ public class Sensor : MonoBehaviour
             {
                 movement_Player.LookAtEnemy(other.gameObject);
             }
-            if(!Movement_Player.isGrounded&&GameObject.Find("ScoreManager(Clone)"))
+            if(this.gameObject.tag == "EscapeSensor")
             {
-                scoreManager = GameObject.Find("ScoreManager(Clone)").GetComponent<ScoreManager>();
-                scoreManager.PlusScore(1000);
+                if(this.gameObject.name == "NiceSensor")
+                {
+                    parent.ChangeScore(500);
+                }
+                if(this.gameObject.name == "GreatSensor")
+                {
+                    parent.ChangeScore(800);
+                }
+                if(this.gameObject.name == "PerfectSensor")
+                {
+                    parent.ChangeScore(1000);
+                }
             }
-            if(this.gameObject.tag == "RollSensor")
-            {
-                scoreManager = GameObject.Find("ScoreManager(Clone)").GetComponent<ScoreManager>();
-                scoreManager.PlusScore(1000);
-            }
+            
         }
     }
 }
