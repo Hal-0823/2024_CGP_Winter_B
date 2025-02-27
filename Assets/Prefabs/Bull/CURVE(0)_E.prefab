@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
-  Speed: 4
+  Speed: 5
   PathPoints: []
   Divisions: 64
   CurveAmount: 4

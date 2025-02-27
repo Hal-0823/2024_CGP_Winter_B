@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 5608783751703193588}
   - component: {fileID: -3827402098974772973}
   - component: {fileID: 3708423376452713378}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -929,7 +929,7 @@ GameObject:
   - component: {fileID: 6160025930158908050}
   m_Layer: 0
   m_Name: HitArea
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
