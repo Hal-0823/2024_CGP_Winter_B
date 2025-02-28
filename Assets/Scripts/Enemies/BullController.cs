@@ -14,6 +14,7 @@ public class BullController : MonoBehaviour
     public float Speed = 5f;
     protected Vector3 direction;    // 闘牛の進行方向
     private int bounceCount;        // 反射した回数
+    private ParticleSystem runParticle;
 
     /// <summary>
     /// 初期化
