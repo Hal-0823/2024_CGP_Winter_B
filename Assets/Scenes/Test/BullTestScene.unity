@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 729038955}
   - component: {fileID: 729038954}
   - component: {fileID: 729038957}
+  - component: {fileID: 729038958}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -413,7 +414,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 9.645, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!114 &729038957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,6 +459,18 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &729038958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729038953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db0acaea94332541897755986d1d9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &802397062
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,6 +860,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2072642815292032135, guid: 1ec0494e70d0d2546a9fc48a5972e24d, type: 3}
+      propertyPath: m_lineSpacing
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 3907517538037165086, guid: 1ec0494e70d0d2546a9fc48a5972e24d, type: 3}
       propertyPath: 'spawnPoints.Array.data[0]'
       value: 
@@ -951,6 +968,10 @@ PrefabInstance:
       propertyPath: 'spawnPoints.Array.data[25]'
       value: 
       objectReference: {fileID: 302237023}
+    - target: {fileID: 6019940316140173630, guid: 1ec0494e70d0d2546a9fc48a5972e24d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 320
+      objectReference: {fileID: 0}
     - target: {fileID: 8354822923273018301, guid: 1ec0494e70d0d2546a9fc48a5972e24d, type: 3}
       propertyPath: m_Name
       value: StageSystems

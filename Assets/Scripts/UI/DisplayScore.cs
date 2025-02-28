@@ -22,14 +22,32 @@ public class DisplayScore : MonoBehaviour
     }
 
 
-
+    string evaluation = "";
     // Update is called once per frame
     void Update()
     {
+        
         int residualScore=scoreManager.GetScore()-beforeScore;
         if (residualScore>=10)
         {
-            effectScoreText.text = "+" + residualScore;
+            if(residualScore>=3000)
+            {
+                evaluation = "Funtastic!!!";
+            }
+            else if(residualScore>=2000)
+            {
+                evaluation = "Excellent!!";
+            }
+            else if(residualScore>=1000)
+            {
+                evaluation = "Great!";
+            }
+            else
+            {
+                evaluation = "Good";
+            }
+
+            effectScoreText.text = "+" + residualScore+"\n  " + evaluation;
             Invoke("DeleteEffect", 2.0f);
         }
         scoreText.text = "Score:" + scoreManager.GetScore();

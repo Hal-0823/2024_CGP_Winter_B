@@ -39,7 +39,7 @@ public class Movement_Player : Information_Player
         if(isGrounded&&!cantOperate)
         {
             isMoving = direction != Vector3.zero;
-            //シフトで移動速度を変更
+            //シフトでローリング
             if((Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3))&&!cantOperate)
             {
                 cantOperate = true;
@@ -87,9 +87,12 @@ public class Movement_Player : Information_Player
 
     void Rolling()
     {
-        moveSpeed = playerRollSpeed;
-        sensor = Instantiate(rollSencor,this.transform);
-        Destroy(sensor,0.3f);
+        if(isMoving)
+        {
+            moveSpeed = playerRollSpeed;
+            sensor = Instantiate(rollSencor,this.transform);
+            Destroy(sensor,0.6f);
+        }
     }
 
     void OnCollisionStay(Collision collision)
@@ -110,8 +113,13 @@ public class Movement_Player : Information_Player
 
     public void GotDamage()
     {
+        cantOperate = true;
+        isMoving = false;
         if(sensor!=null)
-        sensor.GetComponent<SensorParent>().isBanned = true;
+        {
+            sensor.GetComponent<SensorParent>().isBanned = true;
+            Destroy(sensor);
+        }
     }
     
     void Jump()
@@ -120,7 +128,7 @@ public class Movement_Player : Information_Player
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         jumpCoolTime = true;
         sensor = Instantiate(jumpSencor,this.transform);
-        Destroy(sensor,0.3f);
+        Destroy(sensor,0.7f);
         Invoke("ResetJumpCoolTime",1.2f);
     }
     void EndRolling()

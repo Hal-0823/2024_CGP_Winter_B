@@ -21,13 +21,11 @@ public class StatementPlayer : Information_Player
     {
         if (col.CompareTag("Enemy")&&!gotDamage)
         {
+            movement_Player.GotDamage();
             HP -= 1;
             Debug.Log("HP: " + HP);
             animationPlayer.DamageAnimation();
             gotDamage = true;
-            movement_Player.GotDamage();
-            movement_Player.cantOperate = true;
-            movement_Player.StopMoving();
             if (HP <= 0)
             {
                 animationPlayer.DeathAnimation();
