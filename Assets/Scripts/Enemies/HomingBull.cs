@@ -90,7 +90,6 @@ public class HomingBull : BullController
 
     private void Slow()
     {
-        Debug.Log("Slow");
         timer += Time.deltaTime;
 
         if (timer > 0.2f)

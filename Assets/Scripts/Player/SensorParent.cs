@@ -3,21 +3,37 @@ using UnityEngine;
 public class SensorParent : MonoBehaviour
 {
     ScoreManager scoreManager;
-    public bool isBanned;
+    private bool IsBanned;
+    public bool isBanned
+    {
+        get
+        {
+            return IsBanned;
+        }
+        set
+        {
+            IsBanned = value;
+            if(value)
+            {
+                score=0;
+                gameProduction.EndJustEscape();
+            }
+        }
+    }
     private int score=0;
+    GameProduction gameProduction;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameProduction = Camera.main.GetComponent<GameProduction>();
         scoreManager = GameObject.Find("ScoreManager(Clone)").GetComponent<ScoreManager>();
         score=0;
     }
     void OnDestroy()
     {
-        if(!isBanned)
-        {
-            scoreManager.PlusScore(score);
-        }
+        scoreManager.PlusScore(score);
+        gameProduction.EndJustEscape();
     }
 
     public void ChangeScore(int value)
@@ -25,6 +41,7 @@ public class SensorParent : MonoBehaviour
         if(value>score)
         {
             score = value;
+            gameProduction.StartJustEscape();
         }
     }
     // Update is called once per frame
