@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class StatementPlayer : Information_Player
 {
-    bool gotDamage;
+    public bool noDamage;
     Movement_Player movement_Player;
     AnimationPlayer animationPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,13 +19,13 @@ public class StatementPlayer : Information_Player
     }
     void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("Enemy")&&!gotDamage)
+        if (col.CompareTag("Enemy")&&!noDamage)
         {
             movement_Player.GotDamage();
             HP -= 1;
             Debug.Log("HP: " + HP);
             animationPlayer.DamageAnimation();
-            gotDamage = true;
+            noDamage = true;
             if (HP <= 0)
             {
                 animationPlayer.DeathAnimation();
@@ -41,7 +41,7 @@ public class StatementPlayer : Information_Player
     {
         if(HP>0)
         {
-            gotDamage = false;
+            noDamage = false;
             movement_Player.cantOperate = false;
         }
     }
