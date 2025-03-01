@@ -36,6 +36,7 @@ public class BullController : MonoBehaviour
         
 
         transform.position = spawnPosition;
+        targetPosition.y = spawnPosition.y;
         direction = (targetPosition - spawnPosition).normalized;
 
         //　闘牛を進行方向に向ける
