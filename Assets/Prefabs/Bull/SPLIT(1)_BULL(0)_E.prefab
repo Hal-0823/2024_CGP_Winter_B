@@ -971,7 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6da54e2f28fcc49b091ec2fa283684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHitWallAction: {fileID: 0}
+  onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
   Speed: 5
   ChildBull: {fileID: 6672449617011189106, guid: 2e7e7dd1031fd974a97c0ec8d8da0280, type: 3}
   SplitPoint: 2

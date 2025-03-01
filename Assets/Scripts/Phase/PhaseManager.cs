@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 public class PhaseManager : MonoBehaviour
 {
-    public float gameTime = 0f; //ゲーム内経過時間
-    public Transform[] spawnPoints; //敵のスポーン地点
-    public Transform playerPosition; //プレイヤー地点
+    public float GameTime = 0f; //ゲーム内経過時間
+    public Transform[] SpawnPoints; //敵のスポーン地点
+    public Transform Player; //プレイヤー地点
     public List<MonoBehaviour> PhaseList = new List<MonoBehaviour>(); // 発生するフェーズを順番に格納(inspectorから登録)
     private List<IGamePhase> phaseList = new List<IGamePhase>(); // PhaseListをIGamePhase型にキャストしたリスト
     private int currentIndex; //現在のフェーズリストのインデックス
@@ -32,7 +32,7 @@ public class PhaseManager : MonoBehaviour
     {
         if (currentIndex >= phaseList.Count) return;
         
-        gameTime += Time.deltaTime;
+        GameTime += Time.deltaTime;
         phaseList[currentIndex].UpdateState(this);
     }
 
