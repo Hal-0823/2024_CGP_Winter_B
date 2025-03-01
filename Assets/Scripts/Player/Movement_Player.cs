@@ -9,15 +9,21 @@ public class Movement_Player : Information_Player
     private bool isMoving = false;
     protected float moveSpeed;
     public bool cantOperate = false;
+
     bool jumpCoolTime;
+    float rollCoolTime;
+    bool canRoll = true;
     public static bool isGrounded;  
     GameObject sensor;
     AnimationPlayer animationPlayer;
+
+    StatementPlayer hitAreaScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
         animationPlayer = this.GetComponent<AnimationPlayer>();
+        hitAreaScript = GetComponentInChildren<StatementPlayer>();
         player = this.gameObject;
         moveSpeed = playerSpeed;
     }
@@ -39,12 +45,13 @@ public class Movement_Player : Information_Player
         if(isGrounded&&!cantOperate)
         {
             isMoving = direction != Vector3.zero;
+
             //シフトでローリング
-            if((Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3))&&!cantOperate)
+            if((Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3))&&!cantOperate&&canRoll)
             {
                 cantOperate = true;
                 animationPlayer.RollingAnimation();
-                
+                canRoll = false;
                 isMoving = true;
                 Invoke("Rolling",0.21f);
                 Invoke("EndRolling",0.85f);
@@ -52,6 +59,16 @@ public class Movement_Player : Information_Player
             }
         }
         
+        if(!canRoll)
+        {
+            rollCoolTime -= Time.deltaTime;
+            if(rollCoolTime<=0f)
+            {
+                canRoll = true;
+                rollCoolTime = 15f;
+            }
+        }
+
         if(!isMoving||cantOperate)
         {
             animationPlayer.StopMoveAnimation();
@@ -89,6 +106,7 @@ public class Movement_Player : Information_Player
     {
         if(isMoving)
         {
+            hitAreaScript.noDamage = true;
             moveSpeed = playerRollSpeed;
             sensor = Instantiate(rollSencor,this.transform);
             Destroy(sensor,0.6f);
@@ -134,6 +152,7 @@ public class Movement_Player : Information_Player
     void EndRolling()
     {
         moveSpeed = playerSpeed;
+        hitAreaScript.noDamage = false;
         if(isMoving)
         {
             cantOperate = false;
