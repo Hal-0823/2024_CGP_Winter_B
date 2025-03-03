@@ -15,6 +15,7 @@ public class BullController : MonoBehaviour
     protected Vector3 direction;    // 闘牛の進行方向
     private int bounceCount;        // 反射した回数
     private Animator animator;
+    private Rigidbody rb;
 
     /// <summary>
     /// 初期化
@@ -42,6 +43,7 @@ public class BullController : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(direction);
 
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -54,7 +56,7 @@ public class BullController : MonoBehaviour
     /// </summary>
     protected virtual void Move()
     {
-        transform.position += direction * Speed * Time.deltaTime;
+        rb.linearVelocity = direction * Speed;
         animator.SetFloat("Move", Speed);
     }
 
