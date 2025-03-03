@@ -1853,9 +1853,9 @@ MonoBehaviour:
   - {fileID: 5382072598753984779}
   Player: {fileID: 1100037410}
   PhaseList:
+  - {fileID: 8333203258871171014}
   - {fileID: 9191411446163683456}
   - {fileID: 6771466351263850220}
-  - {fileID: 0}
   - {fileID: 0}
 --- !u!33 &643976792167509098
 MeshFilter:
@@ -5779,6 +5779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8333203258871171013}
+  - component: {fileID: 8333203258871171014}
   m_Layer: 0
   m_Name: PhaseC
   m_TagString: Untagged
@@ -12728,7 +12729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 8959187461258574251, guid: 2e7e7dd1031fd974a97c0ec8d8da0280, type: 3}
+  - {fileID: 8959187461258574251, guid: 23aa1766753f99d4fa79932895e73754, type: 3}
 --- !u!1 &6773675128309725224
 GameObject:
   m_ObjectHideFlags: 0
@@ -17214,6 +17215,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1236570556780998786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8333203258871171014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3139119006957621359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4ac00ecc5fe3e46993eb04499acb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab:
+  - {fileID: 5395585996645141722, guid: 9f6d03f482abfa94cab1cf5f7d17c5d2, type: 3}
+  - {fileID: 5395585996645141722, guid: e5e6ecb4fab42634e9f4f4867c1c3a4c, type: 3}
+  - {fileID: 5395585996645141722, guid: 0f9c575dcb1777d499431e33cca8eef8, type: 3}
 --- !u!23 &8342190410204935900
 MeshRenderer:
   m_ObjectHideFlags: 0
