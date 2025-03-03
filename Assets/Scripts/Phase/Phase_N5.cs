@@ -28,7 +28,7 @@ public class Phase_N5 : PhaseBase
         else
         {
             int targetId = spawnId + manager.SpawnPoints.Length/2 + Random.Range(-1, 1);
-            targetId = targetId%(manager.SpawnPoints.Length-1);
+            targetId = targetId%(manager.SpawnPoints.Length);
             bullCtr.Initialize(manager.SpawnPoints[spawnId].position, manager.SpawnPoints[targetId].position);
         }
     }

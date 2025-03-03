@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 5598684475839229688}
   - component: {fileID: 4131624853545923863}
   m_Layer: 6
-  m_Name: HOMING(0)_E
+  m_Name: HOMING(1)_B30E
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,9 +84,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5552c5d1be0e43741ac37b4958be566b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
+  onHitWallAction: {fileID: 11400000, guid: ac8da5c71b6153c49a5f97b722263e34, type: 2}
   Speed: 4
-  RotateSpeed: 60
+  RotateSpeed: 120
 --- !u!64 &5248857743453902271
 MeshCollider:
   m_ObjectHideFlags: 0

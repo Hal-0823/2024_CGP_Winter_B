@@ -90,6 +90,7 @@ public class BullController : MonoBehaviour
 
     public void SetDirection(Vector3 direction)
     {
+        direction.y = 0;
         var n_dir = direction.normalized;
         this.direction = n_dir;
         transform.rotation = Quaternion.LookRotation(direction);

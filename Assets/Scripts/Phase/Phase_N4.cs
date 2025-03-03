@@ -15,7 +15,7 @@ public class Phase_N4 : PhaseBase
     {
         int spawnId = Random.Range(0,manager.SpawnPoints.Length);
         int targetId = spawnId + manager.SpawnPoints.Length/2 + Random.Range(-2, 2);
-        targetId = targetId%(manager.SpawnPoints.Length-1);
+        targetId = targetId%(manager.SpawnPoints.Length);
 
         GameObject spawnEnemyPref = enemyPrefab[Random.Range(0, enemyPrefab.Length)];
         GameObject enemy = Instantiate(spawnEnemyPref);
@@ -24,9 +24,9 @@ public class Phase_N4 : PhaseBase
 
         // ２つ目のスポーンポイントの位置を決定
         spawnId += Random.Range(4, manager.SpawnPoints.Length - 4);
-        spawnId = spawnId%(manager.SpawnPoints.Length-1);
+        spawnId = spawnId%(manager.SpawnPoints.Length);
         targetId = spawnId + manager.SpawnPoints.Length/2 + Random.Range(-2, 2);
-        targetId = targetId%(manager.SpawnPoints.Length-1);
+        targetId = targetId%(manager.SpawnPoints.Length);
 
         spawnEnemyPref = enemyPrefab[Random.Range(0, enemyPrefab.Length)];
         enemy = Instantiate(spawnEnemyPref);

@@ -17,7 +17,7 @@ public class Phase_N1 : PhaseBase
         int spawnId = Random.Range(0, manager.SpawnPoints.Length);
         // 目標地点のインデックス（スポーン地点と反対側にある点のインデックス±1)
         int targetId = spawnId + manager.SpawnPoints.Length/2 + Random.Range(-1, 1);
-        targetId = targetId%(manager.SpawnPoints.Length-1);
+        targetId = targetId%(manager.SpawnPoints.Length);
 
         // 出現する敵を抽選で選んで生成
         GameObject spawnEnemy = enemyPrefab[Random.Range(0, enemyPrefab.Length)];
