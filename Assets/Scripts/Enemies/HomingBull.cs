@@ -4,12 +4,9 @@ public class HomingBull : BullController
 {
     const float WALK_SPEED = 1.0f;
     const float DUSH_SPEED = 12.0f;
+    public float RotateSpeed = 60f;
     private enum State { Walk, Target, Dush, Slow };
     private State currentState = State.Walk;
-    
-    private float walkDuration = 2.0f;
-    private float rotateSpeed = 60f;
-    private float homingDuration = 4.0f;
     private Transform player;
     private Vector3 targetPos;
     private float timer = 0f;
@@ -60,7 +57,7 @@ public class HomingBull : BullController
         Vector3 targetDirection = targetPos - transform.position;
         targetDirection.y= 0;
         targetDirection = targetDirection.normalized;
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetDirection), rotateSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetDirection), RotateSpeed * Time.deltaTime);
         direction = transform.forward;
 
         if (timer > 1.8f)

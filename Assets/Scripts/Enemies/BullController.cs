@@ -14,7 +14,7 @@ public class BullController : MonoBehaviour
     public float Speed = 5f;
     protected Vector3 direction;    // 闘牛の進行方向
     private int bounceCount;        // 反射した回数
-    private ParticleSystem runParticle;
+    private Animator animator;
 
     /// <summary>
     /// 初期化
@@ -34,13 +34,14 @@ public class BullController : MonoBehaviour
             this.gameObject.layer = ENEMY_LAYER;
         }
         
-
         transform.position = spawnPosition;
         targetPosition.y = spawnPosition.y;
         direction = (targetPosition - spawnPosition).normalized;
 
         //　闘牛を進行方向に向ける
         transform.rotation = Quaternion.LookRotation(direction);
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -54,6 +55,7 @@ public class BullController : MonoBehaviour
     protected virtual void Move()
     {
         transform.position += direction * Speed * Time.deltaTime;
+        animator.SetFloat("Move", Speed);
     }
 
     /// <summary>
@@ -88,6 +90,7 @@ public class BullController : MonoBehaviour
 
     public void SetDirection(Vector3 direction)
     {
+        direction.y = 0;
         var n_dir = direction.normalized;
         this.direction = n_dir;
         transform.rotation = Quaternion.LookRotation(direction);

@@ -13,6 +13,7 @@ public class CurveBull : BullController
     {
         base.Initialize(start, end, isSpawn);
         GenerateCurvePath(start, end, Divisions, CurveAmount);
+        SetDirection(PathPoints[currentPointIndex] - transform.position);
     }
 
     private void GenerateCurvePath(Vector3 start, Vector3 end, int divisions, float curveAmount)
@@ -40,19 +41,22 @@ public class CurveBull : BullController
 
     protected override void Move()
     {
-        if (currentPointIndex >= PathPoints.Count) return; // ゴールに到達
-
         // 現在のターゲット地点に向かって進む
-        Vector3 target = PathPoints[currentPointIndex];
-        transform.position = Vector3.MoveTowards(this.transform.position, target, Speed * Time.deltaTime);
-
-        //　闘牛を進行方向に向ける
-        transform.rotation = Quaternion.LookRotation(target - transform.position);
+        base.Move();
 
         // ターゲットに到達したら次のポイントへ
-        if (Vector3.Distance(transform.position, target) < 0.1f)
+        if (Vector3.Distance(transform.position, PathPoints[currentPointIndex]) < 0.2f)
         {
             currentPointIndex++;
+
+            // ゴールに到達したら経路を反転させる
+            if (currentPointIndex >= PathPoints.Count)
+            {
+                PathPoints.Reverse();
+                currentPointIndex = 0;
+            }
+
+            SetDirection(PathPoints[currentPointIndex] - transform.position);
         }
     }
 }

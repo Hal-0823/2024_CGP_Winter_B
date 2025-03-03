@@ -1,38 +1,17 @@
 using UnityEngine;
 
-public class Phase_N2 : MonoBehaviour, IGamePhase
-{
-    private float phaseDuration = 15f;  // フェーズの継続時間
-    private float spawnInterval = 3f;   // スポーンの間隔
-    private float spawnTimer = 0f; // スポーン用のタイマー
-    private float phaseStartTime;   // フェーズが開始したときの時間
-    [SerializeField] private GameObject[] enemyPrefab;
-
-    public void EnterState(PhaseManager manager)
+/// <summary>
+/// プレイヤーがいる方向に向けてスポーンするフェーズ
+/// </summary>
+public class Phase_N2 : PhaseBase
+{    
+    void Start()
     {
-        spawnTimer = 0f;
-
-        // EnterStateした時点での時間を代入
-        phaseStartTime += manager.GameTime;
+        phaseDuration = 15f;
+        spawnInterval = 3f;
     }
 
-    public void UpdateState(PhaseManager manager)
-    {
-        spawnTimer += Time.deltaTime;
-
-        if (spawnTimer >= spawnInterval)
-        {
-            SpawnEnemy(manager);
-            spawnTimer = 0f;
-        }
-
-        if (manager.GameTime - phaseStartTime > phaseDuration)
-        {
-            manager.NextState();
-        }
-    }
-
-    public void SpawnEnemy(PhaseManager manager)
+    public override void SpawnEnemy(PhaseManager manager)
     {
         // スポーン地点のインデックス
         int spawnId = Random.Range(0, manager.SpawnPoints.Length);

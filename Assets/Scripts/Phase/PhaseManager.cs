@@ -38,7 +38,11 @@ public class PhaseManager : MonoBehaviour
 
     public void SwitchState()
     {
-        if (currentIndex >= phaseList.Count) return;
+        if (currentIndex >= phaseList.Count)
+        {
+            Debug.Log("すべてのフェーズが終わりました！");
+            return;
+        } 
 
         phaseList[currentIndex].EnterState(this);
     }
