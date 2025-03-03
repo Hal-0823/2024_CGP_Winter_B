@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitWallAction: {fileID: 11400000, guid: 8db07c1eba62b904cbf478761dec60a0, type: 2}
   Speed: 20
-  chargeTime: 1.5
+  chargeTime: 1.6
   WarningLine: {fileID: 3454628748291329664, guid: a94db0115bb8b8d4bb5086b7fc93ce9f, type: 3}
 --- !u!64 &1490320606489110446
 MeshCollider:
