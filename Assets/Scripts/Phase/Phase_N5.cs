@@ -9,7 +9,7 @@ public class Phase_N5 : PhaseBase
     void Start()
     {
         phaseDuration = 20f;
-        spawnInterval = 6f;
+        spawnInterval = 4.9f;
     }
 
     public override void SpawnEnemy(PhaseManager manager)
