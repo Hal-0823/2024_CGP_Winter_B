@@ -58,7 +58,7 @@ public class HomingBull : BullController
         targetDirection.y= 0;
         targetDirection = targetDirection.normalized;
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetDirection), RotateSpeed * Time.deltaTime);
-        direction = transform.forward;
+        direction = targetDirection;
 
         if (timer > 1.8f)
         {
