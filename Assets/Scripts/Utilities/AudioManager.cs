@@ -110,6 +110,11 @@ public class SE
         ScoreAdd,
         Rolling,
         Jump,
+        BadReaction,
+        NiceReaction,
+        GreatReaction,
+        ExcellentReaction,
+        Start,
 
     }
 
@@ -126,6 +131,9 @@ public class BGM
         Stage_2,
         Stage_3,
         Menu,
+        Result,
+        GameOver,
+        Sllow,
     }
 
     public Name bgmName;

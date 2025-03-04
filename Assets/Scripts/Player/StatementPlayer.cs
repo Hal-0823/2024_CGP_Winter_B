@@ -42,6 +42,7 @@ public class StatementPlayer : Information_Player
         if (col.CompareTag("Enemy")&&!noDamage)
         {
             movement_Player.GotDamage();
+            AudioManager.I.PlaySE(SE.Name.BadReaction);
 
             
             if(scoreManager.GotDamageEffectForScore()<=-5000)
@@ -53,6 +54,7 @@ public class StatementPlayer : Information_Player
             else
             {
                 animationPlayer.DamageAnimation();
+                AudioManager.I.PlaySE(SE.Name.Hit);
                 noDamage = true;
                 Invoke("endDamage", 1f);
             }

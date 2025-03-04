@@ -57,11 +57,6 @@ public class ScoreManager : MonoBehaviour
             }
 
         }
-
-        if(score<=-5000)
-        {
-
-        }
         
     }
 
@@ -74,14 +69,17 @@ public class ScoreManager : MonoBehaviour
                 if(value>=1000)
                 {
                     displayScore.evaluation = "Excellent!";
+                    AudioManager.I.PlaySE(SE.Name.ExcellentReaction);
                 }
                 else if(value>=800)
                 {
                     displayScore.evaluation = "Great!";
+                    AudioManager.I.PlaySE(SE.Name.GreatReaction);
                 }
                 else if(value>=500)
                 {
                     displayScore.evaluation = "Nice!";
+                    AudioManager.I.PlaySE(SE.Name.NiceReaction);
                 }
                 else if(value<0)
                 {
