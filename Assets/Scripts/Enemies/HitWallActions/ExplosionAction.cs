@@ -22,6 +22,8 @@ public class ExplosionAction : OnHitWallAction
         var shape = effect.shape;
         shape.skinnedMeshRenderer = skinnedMeshRenderer;
 
+        AudioManager.I.PlaySE(SE.Name.Explosion);
+
         Destroy(bull.gameObject, 2.0f);
         bull.gameObject.SetActive(false);
     }
