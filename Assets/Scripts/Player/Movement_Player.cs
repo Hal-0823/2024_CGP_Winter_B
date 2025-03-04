@@ -10,9 +10,8 @@ public class Movement_Player : Information_Player
     protected float moveSpeed;
     public bool cantOperate = false;
 
-    bool jumpCoolTime;
-    float rollCoolTime;
-    bool canRoll = true;
+    bool canJump = true;
+    public bool canRoll = true;
     public static bool isGrounded;  
     GameObject sensor;
     AnimationPlayer animationPlayer;
@@ -50,8 +49,9 @@ public class Movement_Player : Information_Player
             if((Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3))&&!cantOperate&&canRoll)
             {
                 cantOperate = true;
-                animationPlayer.RollingAnimation();
                 canRoll = false;
+                animationPlayer.RollingAnimation();
+                hitAreaScript.noDamage = true;
                 isMoving = true;
                 Invoke("Rolling",0.21f);
                 Invoke("EndRolling",0.85f);
@@ -59,15 +59,6 @@ public class Movement_Player : Information_Player
             }
         }
         
-        if(!canRoll)
-        {
-            rollCoolTime -= Time.deltaTime;
-            if(rollCoolTime<=0f)
-            {
-                canRoll = true;
-                rollCoolTime = 15f;
-            }
-        }
 
         if(!isMoving||cantOperate)
         {
@@ -81,7 +72,7 @@ public class Movement_Player : Information_Player
 
 
         // ジャンプ処理
-        if ((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse4)) && isGrounded&&!jumpCoolTime&&!cantOperate)
+        if ((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse4)) && isGrounded&&canJump&&!cantOperate)
         {
             animationPlayer.JumpAnimation();
             Jump();
@@ -106,7 +97,6 @@ public class Movement_Player : Information_Player
     {
         if(isMoving)
         {
-            hitAreaScript.noDamage = true;
             moveSpeed = playerRollSpeed;
             sensor = Instantiate(rollSencor,this.transform);
             Destroy(sensor,0.6f);
@@ -139,15 +129,17 @@ public class Movement_Player : Information_Player
             Destroy(sensor);
         }
     }
+
+
     
     void Jump()
     {
         // 上方向に力を加える
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        jumpCoolTime = true;
+        canJump = false;
         sensor = Instantiate(jumpSencor,this.transform);
         Destroy(sensor,0.7f);
-        Invoke("ResetJumpCoolTime",1.2f);
+        Invoke("ResetJumpCoolTime",0.9f);
     }
     void EndRolling()
     {
@@ -160,7 +152,7 @@ public class Movement_Player : Information_Player
     }
     void ResetJumpCoolTime()
     {
-        jumpCoolTime = false;
+        canJump = true;
     }
     
     public void LookAtEnemy(GameObject enemy)

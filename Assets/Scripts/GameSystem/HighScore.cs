@@ -7,8 +7,23 @@ public class HighScore : MonoBehaviour
     public int[] starNum = new int[5]; //各ステージの星の数
 
     //各ステージのスコアのボーダー
+
+    public static HighScore I;
+
+    void Awake()
+    {
+        if(I == null)
+        {
+            I = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public int[][] borderScore = new int[5][]{
-        new int[3]{3000,5000,8000}, //ステージ1：星１、星２、星３
+        new int[3]{8000,14000,20000}, //ステージ1：星１、星２、星３
         new int[3]{0,0,0}, //ステージ2：*
         new int[3]{0,0,0},
         new int[3]{0,0,0},
@@ -43,6 +58,11 @@ public class HighScore : MonoBehaviour
             userData.AddStar(star-starNum[stageNum-1]);
             starNum[stageNum-1] = star;
         }
+    }
+
+    public int GetBorderScore(int border)
+    {
+        return borderScore[stageNum-1][border-1];
     }
 
     // Update is called once per frame

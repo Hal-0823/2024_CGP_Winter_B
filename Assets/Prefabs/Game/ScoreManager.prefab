@@ -59,5 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17fe057152a6684b87189b33ae8e39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  effectScoreText: {fileID: 0}
+  prefabBorderImage: {fileID: 4475790257264479356, guid: 5dbb14a83acb6534a988897a4c3b150e, type: 3}
+  backGround: {fileID: 0}
+  evaluation: 
