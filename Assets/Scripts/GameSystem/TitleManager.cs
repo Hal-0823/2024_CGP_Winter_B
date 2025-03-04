@@ -9,7 +9,7 @@ public class TitleManager : MonoBehaviour
     public void OnClick()
     {
         AudioManager.I.StopBGM();
-        //AudioManager.I.PlaySE(SE.Name.Click);
+        AudioManager.I.PlaySE(SE.Name.Click);
         FadeManager.I.LoadSceneWithFade("StageSelect", 1f);
     }
 }
