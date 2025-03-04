@@ -29,4 +29,5 @@ public class PoseManager : MonoBehaviour
             isPose = !isPose;
         }
     }
+    
 }

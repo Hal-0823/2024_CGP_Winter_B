@@ -50,6 +50,7 @@ public class StatementPlayer : Information_Player
                 //ゲームオーバー処理はここに書く
                 animationPlayer.DeathAnimation();
                 noDamage = true;
+                Destroy(scoreManager.gameObject,1.0f);
             }
             else
             {
