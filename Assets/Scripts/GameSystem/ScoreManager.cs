@@ -40,7 +40,7 @@ public class ScoreManager : MonoBehaviour
     void OnDestroy()
     {
         isCountScore = false;
-        HighScore.I.SaveHighScore(score);
+        HighScore.I.SaveHighScore(score+timeScore*1000);
 
     }
 

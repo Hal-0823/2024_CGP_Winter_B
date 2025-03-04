@@ -2,7 +2,22 @@ using UnityEngine;
 
 public class HighScore : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    //ステージセレクトシーンで使うメソッド達
+    public int GetBorderScoreForStageSelect(int stageNum,int border)
+    {
+        return borderScore[stageNum-1][border-1];
+    }
+    public int GetUserHighScoreEachStage(int stageNum)
+    {
+        return highScore[stageNum-1];
+    }
+    public int GetUserStarNumEachStage(int stageNum)
+    {
+        return starNum[stageNum-1];
+    }
+
+
     public int[] highScore = new int[6]; //ハイスコア(インデックス０は無限ステージ（仮）)
     public int[] starNum = new int[5]; //各ステージの星の数
 
@@ -70,4 +85,6 @@ public class HighScore : MonoBehaviour
     {
         
     }
+
+    
 }
