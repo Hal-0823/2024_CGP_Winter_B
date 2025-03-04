@@ -329,9 +329,9 @@ MonoBehaviour:
   bgmList:
   - bgmName: 0
     bGMClip: {fileID: 8300000, guid: 537caf5cdd3728e4680fe2d83f77193b, type: 3}
-  - bgmName: 1
-    bGMClip: {fileID: 8300000, guid: 72dfbd67047776b4791fc3179b26c42f, type: 3}
-  - bgmName: 2
-    bGMClip: {fileID: 8300000, guid: 508d3fb8d324c0a41af8ac024bb51425, type: 3}
+  - bgmName: 5
+    bGMClip: {fileID: 8300000, guid: 4d43f995e6ea75c44936761e5b469b28, type: 3}
+  - bgmName: 6
+    bGMClip: {fileID: 8300000, guid: cb3a222687f9a5d4f9c7b660a9a44790, type: 3}
   seSlider: {fileID: 0}
   bgmSlider: {fileID: 0}
