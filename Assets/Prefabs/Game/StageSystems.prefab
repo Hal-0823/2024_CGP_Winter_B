@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5501977940719608280}
   - component: {fileID: 910243762712050274}
   m_Layer: 5
-  m_Name: Background
+  m_Name: VoltageBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,8 +504,9 @@ GameObject:
   - component: {fileID: 2177086503013625656}
   - component: {fileID: 2640086530298333105}
   - component: {fileID: 873971340000461726}
+  - component: {fileID: 4573165126830407367}
   m_Layer: 5
-  m_Name: ScoreCanvas
+  m_Name: StageCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -597,6 +598,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4573165126830407367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459980778658775420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a9cd5cda5a6c14ea0f7719d91ec25c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poseUI: {fileID: 8495873907291968424, guid: 11e2cea30b7201542980c0f5167df4a0, type: 3}
 --- !u!1 &6743462392051043700
 GameObject:
   m_ObjectHideFlags: 0

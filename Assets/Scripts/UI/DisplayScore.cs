@@ -19,7 +19,7 @@ public class DisplayScore : MonoBehaviour
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
         scoreSlider = GameObject.Find("VOLTAGE").GetComponent<Slider>();
         effectScoreText = GameObject.Find("ScoreEffectText").GetComponent<TextMeshProUGUI>();
-        backGround = GameObject.Find("Background");
+        backGround = GameObject.Find("VoltageBackground");
         scoreManager = GetComponent<ScoreManager>();
         beforeScore = scoreManager.GetScore();
         for (int i = 1; i <= 3; i++)
