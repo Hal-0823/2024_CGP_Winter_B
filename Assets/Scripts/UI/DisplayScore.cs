@@ -24,9 +24,9 @@ public class DisplayScore : MonoBehaviour
         beforeScore = scoreManager.GetScore();
         for (int i = 1; i <= 3; i++)
         {
-            float borderX = 400f*(float)(HighScore.I.GetBorderScore(i) + 5000f) / (HighScore.I.GetBorderScore(3) + 5000f);
+            float borderX = 800f*(float)(HighScore.I.GetBorderScore(i) + 5000f) / (HighScore.I.GetBorderScore(3) + 5000f);
             border[i-1] = Instantiate(prefabBorderImage, backGround.transform);
-            border[i-1].transform.localPosition = new Vector3((borderX-200f), 0, 0);
+            border[i-1].transform.localPosition = new Vector3((borderX-400f), 0, 0);
             TextMeshProUGUI borderText = border[i - 1].transform.GetChild(0).GetComponent<TextMeshProUGUI>();
             borderText.text = HighScore.I.GetBorderScore(i).ToString();
             Debug.Log("borderRatio:" + borderX);
@@ -51,9 +51,9 @@ public class DisplayScore : MonoBehaviour
         int residualScore=scoreManager.GetScore()-beforeScore;
         if (residualScore>=10)
         {
+            effectScoreText.color = Color.white;
             effectScoreText.text = "+" + residualScore+"\n  " + evaluation;
             Invoke("DeleteEffect", 2.0f);
-            Debug.Log((scoreManager.GetScore()+" / "+HighScore.I.GetBorderScore(3)));
 
         }
         else if(residualScore<0)
@@ -62,15 +62,32 @@ public class DisplayScore : MonoBehaviour
             effectScoreText.text = residualScore.ToString();
             Invoke("DeleteEffect", 2.0f);
         }
-        scoreText.text = "Score:" + scoreManager.GetScore();
+        if(scoreManager.GetScore()<=0)
+        {scoreText.text = "Score:0\nCombo:x"+scoreManager.GetCombo();}
+        else
+        {scoreText.text = "Score:" + scoreManager.GetScore()+"\nCombo:x"+scoreManager.GetCombo();}
         beforeScore = scoreManager.GetScore();
 
     }
     void DeleteEffect()
     {
         effectScoreText.text = "";
-        effectScoreText.color = Color.white;
         evaluation = "";
+    }
+
+    public void BorderEffect(int borderNum)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            border[i].GetComponent<Image>().color = Color.white;
+        }
+        if(borderNum>0)
+        {
+            for (int i = 1; i <= borderNum; i++)
+            {
+                border[i-1].GetComponent<Image>().color = Color.red;
+            }
+        }
     }
     
 }

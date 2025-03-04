@@ -2,7 +2,29 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int score; // スコア
+    private int Score; // スコア
+    public int score
+    {
+        get 
+        {
+            
+            return Score;
+        }
+
+        set 
+        { 
+            Score = value;
+
+            if(Score>=HighScore.I.GetBorderScore(1)&&Score<HighScore.I.GetBorderScore(2))
+            {displayScore.BorderEffect(1);}
+            else if(Score>=HighScore.I.GetBorderScore(2)&&Score<HighScore.I.GetBorderScore(3))
+            {displayScore.BorderEffect(2);}
+            else if(Score>HighScore.I.GetBorderScore(3))
+            {displayScore.BorderEffect(3);}
+            else
+            {displayScore.BorderEffect(0);}
+        }
+    }
     DisplayScore displayScore;
     private int timeScore = 0;
     float time = 0;
@@ -11,9 +33,9 @@ public class ScoreManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        displayScore = this.gameObject.GetComponent<DisplayScore>();
         score = 0;
         isCountScore = true;
-        displayScore = this.gameObject.GetComponent<DisplayScore>();
     }
     void OnDestroy()
     {
@@ -33,6 +55,11 @@ public class ScoreManager : MonoBehaviour
                 timeScore += 1;
                 time = 0;
             }
+
+        }
+
+        if(score<=-5000)
+        {
 
         }
         
@@ -61,7 +88,6 @@ public class ScoreManager : MonoBehaviour
                     displayScore.evaluation = "Miss!";
                     Debug.Log(displayScore.evaluation);
                 }
-                Debug.Log("現在コンボ数: " + comboNum);
                 score += (int)(value * (1.0f + (comboNum * 0.1f)));
                 comboNum++;
             }
@@ -78,9 +104,15 @@ public class ScoreManager : MonoBehaviour
         return score;
     }
 
-    public void GotDamageEffectForScore()
+    public int GetCombo()
+    {
+        return (int)comboNum;
+    }
+
+    public int GotDamageEffectForScore()
     {
         PlusScore(-1000);
         comboNum = 0;
+        return score;
     }
 }
