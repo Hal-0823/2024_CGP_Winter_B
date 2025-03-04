@@ -53,8 +53,8 @@ public class Movement_Player : Information_Player
                 animationPlayer.RollingAnimation();
                 hitAreaScript.noDamage = true;
                 isMoving = true;
-                Invoke("Rolling",0.21f);
-                Invoke("EndRolling",0.85f);
+                Invoke("Rolling",0.20f);
+                Invoke("EndRolling",0.8f);
                 
             }
         }
@@ -97,12 +97,22 @@ public class Movement_Player : Information_Player
     {
         if(isMoving)
         {
+            AudioManager.I.PlaySE(SE.Name.Rolling);
             moveSpeed = playerRollSpeed;
             sensor = Instantiate(rollSencor,this.transform);
-            Destroy(sensor,0.6f);
+            Destroy(sensor,0.5f);
         }
     }
-
+    void OnCollisionEnter(Collision other) {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            if(isGrounded==false)
+            {
+                AudioManager.I.PlaySE(SE.Name.Jump);
+                isGrounded = true;
+            }
+        }
+    }
     void OnCollisionStay(Collision collision)
     {
         if (collision.collider.CompareTag("Ground"))

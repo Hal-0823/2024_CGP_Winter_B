@@ -2,7 +2,29 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int score; // スコア
+    private int Score; // スコア
+    public int score
+    {
+        get 
+        {
+            
+            return Score;
+        }
+
+        set 
+        { 
+            Score = value;
+
+            if(Score>=HighScore.I.GetBorderScore(1)&&Score<HighScore.I.GetBorderScore(2))
+            {displayScore.BorderEffect(1);}
+            else if(Score>=HighScore.I.GetBorderScore(2)&&Score<HighScore.I.GetBorderScore(3))
+            {displayScore.BorderEffect(2);}
+            else if(Score>HighScore.I.GetBorderScore(3))
+            {displayScore.BorderEffect(3);}
+            else
+            {displayScore.BorderEffect(0);}
+        }
+    }
     DisplayScore displayScore;
     private int timeScore = 0;
     float time = 0;
@@ -11,9 +33,9 @@ public class ScoreManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        displayScore = this.gameObject.GetComponent<DisplayScore>();
         score = 0;
         isCountScore = true;
-        displayScore = this.gameObject.GetComponent<DisplayScore>();
     }
     void OnDestroy()
     {
@@ -47,21 +69,23 @@ public class ScoreManager : MonoBehaviour
                 if(value>=1000)
                 {
                     displayScore.evaluation = "Excellent!";
+                    AudioManager.I.PlaySE(SE.Name.ExcellentReaction);
                 }
                 else if(value>=800)
                 {
                     displayScore.evaluation = "Great!";
+                    AudioManager.I.PlaySE(SE.Name.GreatReaction);
                 }
                 else if(value>=500)
                 {
                     displayScore.evaluation = "Nice!";
+                    AudioManager.I.PlaySE(SE.Name.NiceReaction);
                 }
                 else if(value<0)
                 {
                     displayScore.evaluation = "Miss!";
                     Debug.Log(displayScore.evaluation);
                 }
-                Debug.Log("現在コンボ数: " + comboNum);
                 score += (int)(value * (1.0f + (comboNum * 0.1f)));
                 comboNum++;
             }
@@ -78,9 +102,15 @@ public class ScoreManager : MonoBehaviour
         return score;
     }
 
-    public void GotDamageEffectForScore()
+    public int GetCombo()
+    {
+        return (int)comboNum;
+    }
+
+    public int GotDamageEffectForScore()
     {
         PlusScore(-1000);
         comboNum = 0;
+        return score;
     }
 }

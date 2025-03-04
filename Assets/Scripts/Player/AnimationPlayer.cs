@@ -49,6 +49,7 @@ public class AnimationPlayer : Information_Player
     }
     public void DeathAnimation()
     {
+        anim.SetTrigger("death");
         anim.SetBool("bldeath", true);
     }
 

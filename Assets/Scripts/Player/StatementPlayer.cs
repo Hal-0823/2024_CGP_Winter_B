@@ -7,7 +7,7 @@ public class StatementPlayer : Information_Player
     Movement_Player movement_Player;
     AnimationPlayer animationPlayer;
     ScoreManager scoreManager;
-    float rollCoolTime = 15f;
+    float rollCoolTime = 10f;
     float downTime;
     public Image progressImage;    // 進捗バー（円形）
 
@@ -42,22 +42,28 @@ public class StatementPlayer : Information_Player
         if (col.CompareTag("Enemy")&&!noDamage)
         {
             movement_Player.GotDamage();
-            HP -= 1;
-            scoreManager.GotDamageEffectForScore();
-            Debug.Log("HP: " + HP);
-            animationPlayer.DamageAnimation();
-            noDamage = true;
-            if (HP <= 0)
+            AudioManager.I.PlaySE(SE.Name.BadReaction);
+
+            
+            if(scoreManager.GotDamageEffectForScore()<=-5000)
             {
+                //ゲームオーバー処理はここに書く
                 animationPlayer.DeathAnimation();
+                noDamage = true;
             }
             else
             {
+                animationPlayer.DamageAnimation();
+                AudioManager.I.PlaySE(SE.Name.Hit);
+                noDamage = true;
                 Invoke("endDamage", 1f);
             }
             
+            
         }
     }
+
+
     void endDamage()
     {
         if(HP>0)
