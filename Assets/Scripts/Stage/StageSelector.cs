@@ -16,6 +16,7 @@ public class StageSelector : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.I.PlayBGM(BGM.Name.StageSelect);
         selectId = 0;
         rotationSpeed = 20.0f;
 
