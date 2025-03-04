@@ -41,10 +41,10 @@ AudioSource:
   m_GameObject: {fileID: 2999285586082944274}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
+  OutputAudioMixerGroup: {fileID: 7211175763832104287, guid: 9a35dfbc69fed0341b12e5eed317a97c, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 537caf5cdd3728e4680fe2d83f77193b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 537caf5cdd3728e4680fe2d83f77193b, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -170,7 +170,7 @@ AudioSource:
   m_GameObject: {fileID: 7588497704157630094}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 4083700690084519432, guid: 9a35dfbc69fed0341b12e5eed317a97c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -307,9 +307,31 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 9a35dfbc69fed0341b12e5eed317a97c, type: 2}
   SESource: {fileID: 296170353911382509}
   BGMSource: {fileID: 1393746831853459174}
-  seList: []
+  seList:
+  - seName: 0
+    sEClip: {fileID: 8300000, guid: 8a63e2f3d755e6d4188c56e9a7cbfdba, type: 3}
+  - seName: 6
+    sEClip: {fileID: 8300000, guid: 70085c61275202345b418831a700e63d, type: 3}
+  - seName: 7
+    sEClip: {fileID: 8300000, guid: 06d96a2b491b6cd41b89392156facdc3, type: 3}
+  - seName: 8
+    sEClip: {fileID: 8300000, guid: 4129efaf687d1464f922699793adc2e4, type: 3}
+  - seName: 9
+    sEClip: {fileID: 8300000, guid: eef118e5e7490614ba839c7fb30a43a3, type: 3}
+  - seName: 2
+    sEClip: {fileID: 8300000, guid: 7ffdba6c576aa0045b21bb86e61740b7, type: 3}
+  - seName: 1
+    sEClip: {fileID: 8300000, guid: fb657eca023964d4fbc561be8bae5e64, type: 3}
+  - seName: 4
+    sEClip: {fileID: 8300000, guid: 179c969aea3ac6549aa5d785a1ccf6e9, type: 3}
+  - seName: 5
+    sEClip: {fileID: 8300000, guid: fb0b1b9e414fbdb429ca9a96525a7b3e, type: 3}
   bgmList:
   - bgmName: 0
     bGMClip: {fileID: 8300000, guid: 537caf5cdd3728e4680fe2d83f77193b, type: 3}
+  - bgmName: 1
+    bGMClip: {fileID: 8300000, guid: 72dfbd67047776b4791fc3179b26c42f, type: 3}
+  - bgmName: 2
+    bGMClip: {fileID: 8300000, guid: 508d3fb8d324c0a41af8ac024bb51425, type: 3}
   seSlider: {fileID: 0}
   bgmSlider: {fileID: 0}
