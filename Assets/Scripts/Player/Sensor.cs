@@ -14,7 +14,6 @@ public class Sensor : MonoBehaviour
         Movement_Player movement_Player = transform.parent.GetComponent<Movement_Player>();
         if (other.gameObject.tag == "Enemy"&&parent.isBanned==false)
         {
-            Debug.Log("センサーが " + other.gameObject.name + " を感知");
             if(isMant)
             {
                 movement_Player.LookAtEnemy(other.gameObject);
