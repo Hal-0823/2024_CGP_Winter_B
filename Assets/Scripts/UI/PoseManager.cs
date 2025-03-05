@@ -10,7 +10,6 @@ public class PoseManager : MonoBehaviour
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
