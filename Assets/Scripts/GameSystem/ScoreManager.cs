@@ -68,23 +68,22 @@ public class ScoreManager : MonoBehaviour
             {
                 if(value>=1000)
                 {
-                    displayScore.evaluation = "Excellent!";
+                    displayScore.SetEvaluationImage(2);
                     AudioManager.I.PlaySE(SE.Name.ExcellentReaction);
                 }
                 else if(value>=800)
                 {
-                    displayScore.evaluation = "Great!";
+                    displayScore.SetEvaluationImage(1);
                     AudioManager.I.PlaySE(SE.Name.GreatReaction);
                 }
                 else if(value>=500)
                 {
-                    displayScore.evaluation = "Nice!";
+                    displayScore.SetEvaluationImage(0);
                     AudioManager.I.PlaySE(SE.Name.NiceReaction);
                 }
                 else if(value<0)
                 {
-                    displayScore.evaluation = "Miss!";
-                    Debug.Log(displayScore.evaluation);
+                   
                 }
                 score += (int)(value * (1.0f + (comboNum * 0.1f)));
                 comboNum++;
