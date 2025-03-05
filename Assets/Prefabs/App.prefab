@@ -204,9 +204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eec185d29a44a6418467079099e5607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageNum: 1
   highScore: 000000000000000000000000000000000000000000000000
   starNum: 0000000000000000000000000000000000000000
-  stageNum: 1
 --- !u!1 &5422512984773680129
 GameObject:
   m_ObjectHideFlags: 0
