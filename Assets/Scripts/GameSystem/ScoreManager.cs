@@ -30,12 +30,14 @@ public class ScoreManager : MonoBehaviour
     float time = 0;
     private float comboNum = 0;
     public static bool isCountScore = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private AudienceController audience;    // ステージの観客を制御するクラス
+
     void Start()
     {
         displayScore = this.gameObject.GetComponent<DisplayScore>();
         score = 0;
         isCountScore = true;
+        audience = GameObject.FindWithTag("Audience").GetComponent<AudienceController>();
     }
     void OnDestroy()
     {
@@ -44,7 +46,7 @@ public class ScoreManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if(isCountScore)
@@ -66,6 +68,8 @@ public class ScoreManager : MonoBehaviour
         {
             if(value>0)
             {
+                audience.SetGlad();
+
                 if(value>=1000)
                 {
                     displayScore.SetEvaluationImage(2);
@@ -81,15 +85,14 @@ public class ScoreManager : MonoBehaviour
                     displayScore.SetEvaluationImage(0);
                     AudioManager.I.PlaySE(SE.Name.NiceReaction);
                 }
-                else if(value<0)
-                {
-                   
-                }
+
                 score += (int)(value * (1.0f + (comboNum * 0.1f)));
                 comboNum++;
             }
             else if(value<0)
             {
+                audience.SetAngry();
+
                 score += value;
                 comboNum = 0;
             }

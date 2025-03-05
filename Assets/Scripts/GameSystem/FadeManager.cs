@@ -13,6 +13,7 @@ public class FadeManager : MonoBehaviour
     public float LoadDuration = 2.0f;
     [SerializeField] CanvasGroup fadeCanvas;
     [SerializeField] Image fadePanel;
+    [SerializeField] Image loadingImage;
     private Color fadeColor;
 
     private void Awake()
@@ -29,6 +30,7 @@ public class FadeManager : MonoBehaviour
 
     private void Start()
     {
+        loadingImage.enabled = false;
         fadeColor = Color.black;
         fadePanel.color = fadeColor;
         fadeCanvas.alpha = 1; // 初期状態は黒画面
@@ -80,9 +82,11 @@ public class FadeManager : MonoBehaviour
 
     /// <param name="sceneName">遷移先のシーン名</param>
     /// <param name="color">ロード画面の色</param>
-    public void LoadSceneWithFade(string sceneName, Color color)
+    /// <param name="duration">ロード画面の表示時間</param>
+    public void LoadSceneWithFade(string sceneName, Color color, float duration)
     {
         fadeColor = color;
+        LoadDuration = duration;
         StartCoroutine(Transition(sceneName));
     }
 
@@ -90,8 +94,16 @@ public class FadeManager : MonoBehaviour
     {
         fadePanel.color = fadeColor;
         yield return StartCoroutine(FadeOut());
+        
+        if (LoadDuration > 0.2f)
+        {
+            loadingImage.enabled = true;
+            yield return new WaitForSeconds(LoadDuration - 0.2f); // ロード画面表示時間
+            loadingImage.enabled = false;
+        }
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-        yield return new WaitForSeconds(LoadDuration); // ロード画面表示時間
+        yield return new WaitForSeconds(0.2f); // ロード画面表示時間
         StartCoroutine(FadeIn());
+        
     }
 }
