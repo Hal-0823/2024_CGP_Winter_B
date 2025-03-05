@@ -29,7 +29,7 @@ public class ScoreManager : MonoBehaviour
     private int timeScore = 0;
     float time = 0;
     private float comboNum = 0;
-    public bool isCountScore = false;
+    public static bool isCountScore = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,7 +40,7 @@ public class ScoreManager : MonoBehaviour
     void OnDestroy()
     {
         isCountScore = false;
-        HighScore.I.SaveHighScore(score+timeScore*1000);
+        HighScore.I.SaveHighScore(score);
 
     }
 
@@ -110,7 +110,10 @@ public class ScoreManager : MonoBehaviour
     public int GotDamageEffectForScore()
     {
         PlusScore(-1000);
-        comboNum = 0;
+        if(isCountScore)
+        {
+            comboNum = 0;
+        }
         return score;
     }
 }
