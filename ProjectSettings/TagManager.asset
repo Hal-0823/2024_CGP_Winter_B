@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - SpawnArea
   - EscapeSensor
+  - Audience
   layers:
   - Default
   - TransparentFX
