@@ -12,10 +12,16 @@ public class DisplayScore : MonoBehaviour
     GameObject backGround;
     ScoreManager scoreManager;
     private GameObject[] border=new GameObject[3];
+    public Image evaluationImage;
+    public Sprite[] evaluationSprite=new Sprite[3];
+    public void SetEvaluationImage(int evaluationNum)
+    {
+        evaluationImage.sprite = evaluationSprite[evaluationNum];
+    }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        evaluationImage.enabled = false;
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
         scoreSlider = GameObject.Find("VOLTAGE").GetComponent<Slider>();
         effectScoreText = GameObject.Find("ScoreEffectText").GetComponent<TextMeshProUGUI>();
@@ -39,7 +45,7 @@ public class DisplayScore : MonoBehaviour
     }
 
 
-    public string evaluation = "";
+    
     float AchivementRate()
     {
         return ((float)(scoreManager.GetScore()+5000f)/(HighScore.I.GetBorderScore(3)+5000f));
@@ -52,7 +58,8 @@ public class DisplayScore : MonoBehaviour
         if (residualScore>=10)
         {
             effectScoreText.color = Color.white;
-            effectScoreText.text = "+" + residualScore+"\n  " + evaluation;
+            effectScoreText.text = "+" + residualScore;
+            evaluationImage.enabled = true;
             Invoke("DeleteEffect", 2.0f);
 
         }
@@ -72,7 +79,7 @@ public class DisplayScore : MonoBehaviour
     void DeleteEffect()
     {
         effectScoreText.text = "";
-        evaluation = "";
+        evaluationImage.enabled = false;
     }
 
     public void BorderEffect(int borderNum)
