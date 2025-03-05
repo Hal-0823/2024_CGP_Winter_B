@@ -9,6 +9,7 @@ public class PhaseManager : MonoBehaviour
     public List<MonoBehaviour> PhaseList = new List<MonoBehaviour>(); // 発生するフェーズを順番に格納(inspectorから登録)
     private List<IGamePhase> phaseList = new List<IGamePhase>(); // PhaseListをIGamePhase型にキャストしたリスト
     private int currentIndex; //現在のフェーズリストのインデックス
+    private bool isStarted;
 
     private void Awake()
     {
@@ -22,14 +23,25 @@ public class PhaseManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    void Start()
+    {
+        StartPhase();
+    }
+
+    /// <summary>
+    /// フェーズを開始する
+    /// </summary>
+    public void StartPhase()
     {
         currentIndex = 0;
+        isStarted = true;
         SwitchState();
     }
 
     private void Update()
     {
+        if (!isStarted) return;
+
         if (currentIndex >= phaseList.Count) return;
         
         GameTime += Time.deltaTime;

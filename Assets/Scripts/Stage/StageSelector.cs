@@ -87,4 +87,9 @@ public class StageSelector : MonoBehaviour
         ApplyStageInfo();
         transform.rotation = Quaternion.identity;
     }
+
+    public StageInfo GetStageInfo()
+    {
+        return Stage[selectId];
+    }
 }
