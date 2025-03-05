@@ -28,4 +28,10 @@ public class UserData : MonoBehaviour
     {
         STAR += value;
     }
+
+    public int GetStar()
+    {
+        return STAR;
+    }
+    
 }

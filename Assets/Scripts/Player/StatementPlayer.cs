@@ -17,7 +17,7 @@ public class StatementPlayer : Information_Player
         animationPlayer = this.GetComponentInParent<AnimationPlayer>();
         movement_Player = this.GetComponentInParent<Movement_Player>();
         downTime=0f;
-        progressImage = GameObject.Find("RollStamina").GetComponent<Image>();
+        progressImage = GameObject.Find("RollStaminaFill").GetComponent<Image>();
         progressImage.fillAmount = 1;
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
