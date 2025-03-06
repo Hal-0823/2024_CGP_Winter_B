@@ -28,7 +28,6 @@ public class PerformManager : MonoBehaviour
 
     void Start()
     {
-        cameraObj = GameObject.Find("Camera");
         Panel = GameObject.Find("Panel").GetComponent<CanvasGroup>();
         stageText = GameObject.Find("StageText").GetComponent<RectTransform>();
         startTextReady = GameObject.Find("StartTextReady (TMP)").GetComponent<CanvasGroup>();
@@ -37,6 +36,7 @@ public class PerformManager : MonoBehaviour
         gameManager = FindAnyObjectByType<GameManager>();
         animationPlayer = gameManager.player.GetComponent<AnimationPlayer>();
         uiCanvasCg = gameManager.uiCanvas.GetComponent<CanvasGroup>();
+        cameraObj = gameManager.performCamera;
     }
 
     void Update()
@@ -88,6 +88,7 @@ public class PerformManager : MonoBehaviour
             DOTweenHelper.LerpAsync(0f, 1f, 0.5f, Ease.InOutQuad, (value) => startTextGoCg.alpha = value),
             DOTweenHelper.LerpAsync(1.5f, 2f, 0.5f, Ease.OutBack, (value) => startTextGoRt.localScale = Vector3.one * value)
         );
+        await UniTask.Delay(1000);
 
         // 少し小さくなる
         DOTweenHelper.LerpAsync(2f, 1.5f, 0.5f, Ease.InOutQuad, (value) => startTextGoRt.localScale = Vector3.one * value);

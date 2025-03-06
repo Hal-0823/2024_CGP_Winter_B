@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
     public bool isEndPerform;
     public GameObject player;
     public GameObject uiCanvas;
+    public GameObject performCamera;
     public StatementPlayer statementPlayer;
     public AnimationPlayer animationPlayer;
     public Movement_Player movement_Player;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject phaseManagerPrefab;
     [SerializeField] private GameObject scoreManagerPrefab;
+    [SerializeField] private GameObject performCameraPrefab;
 
     void Awake()
     {
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
         Instantiate(endCanvas);
 
         // PerformManagerのインスタンス化
+        performCamera = Instantiate(performCameraPrefab);
         Instantiate(performManagerPrefab);
 
         // PerformManagerの演出開始フラグを立てる
