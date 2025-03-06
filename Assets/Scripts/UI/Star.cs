@@ -10,6 +10,12 @@ public class Star : MonoBehaviour
     public bool State { get; private set; }
     private Image image;
 
+    void Start()
+    {
+        image = GetComponent<Image>();
+        SetState(false);
+    }
+
     public void SetState(bool state)
     {
         State = state;
