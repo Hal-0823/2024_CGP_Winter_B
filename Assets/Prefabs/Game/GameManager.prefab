@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &987072019270433573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5138115736887018916}
+  - component: {fileID: 3788042401829887898}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5138115736887018916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987072019270433573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.052607656, y: -4.300085, z: 27.17216}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3788042401829887898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987072019270433573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e04ac7496796448a3c3fce0cf071f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStartPerform: 1
+  isEndPerform: 0
+  player: {fileID: 0}
+  uiCanvas: {fileID: 0}
+  performCamera: {fileID: 0}
+  statementPlayer: {fileID: 0}
+  animationPlayer: {fileID: 0}
+  movement_Player: {fileID: 0}
+  uiCanvasPrefab: {fileID: 7463745899133024339, guid: eac7a3a49c31bbf41a839754d74bea11, type: 3}
+  startCanvas: {fileID: 4984204744499121209, guid: 849536b502de84d4d865d05c9366233f, type: 3}
+  endCanvas: {fileID: 4604124173135312987, guid: 27eaf86cdc6bdf342b7a460261af1ef8, type: 3}
+  performManagerPrefab: {fileID: 123175055117251874, guid: 6770a27d095ef9842b8d370464b571da, type: 3}
+  playerPrefab: {fileID: 1507362512967442089, guid: ba28e9f7c3fdc5f48bc442e8819f33f4, type: 3}
+  phaseManagerPrefab: {fileID: 4864840432535961847, guid: f1cc657ff368a1e42961c6225b6454a8, type: 3}
+  scoreManagerPrefab: {fileID: 171920520806544828, guid: c51bde17ecc29b94d9bd3d77b7e6508b, type: 3}
+  performCameraPrefab: {fileID: 8333262770573323854, guid: 628c7b2e2e8d6ec419e2515b340de7ba, type: 3}
