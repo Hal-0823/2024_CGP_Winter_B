@@ -30,9 +30,9 @@ public class PerformManager : MonoBehaviour
     {
         Panel = GameObject.Find("Panel").GetComponent<CanvasGroup>();
         stageText = GameObject.Find("StageText").GetComponent<RectTransform>();
-        startTextReady = GameObject.Find("StartTextReady (TMP)").GetComponent<CanvasGroup>();
-        startTextGoRt = GameObject.Find("StartTextGo (TMP)").GetComponent<RectTransform>();
-        startTextGoCg = GameObject.Find("StartTextGo (TMP)").GetComponent<CanvasGroup>();
+        startTextReady = GameObject.Find("StartTextReady").GetComponent<CanvasGroup>();
+        startTextGoRt = GameObject.Find("StartTextGo").GetComponent<RectTransform>();
+        startTextGoCg = GameObject.Find("StartTextGo").GetComponent<CanvasGroup>();
         gameManager = FindAnyObjectByType<GameManager>();
         animationPlayer = gameManager.player.GetComponent<AnimationPlayer>();
         uiCanvasCg = gameManager.uiCanvas.GetComponent<CanvasGroup>();
@@ -86,13 +86,13 @@ public class PerformManager : MonoBehaviour
         startTextGoRt.localScale = Vector3.one * 1.5f;
         await UniTask.WhenAll(
             DOTweenHelper.LerpAsync(0f, 1f, 0.5f, Ease.InOutQuad, (value) => startTextGoCg.alpha = value),
-            DOTweenHelper.LerpAsync(1.5f, 2f, 0.5f, Ease.OutBack, (value) => startTextGoRt.localScale = Vector3.one * value)
+            DOTweenHelper.LerpAsync(3.5f, 4f, 0.5f, Ease.OutBack, (value) => startTextGoRt.localScale = Vector3.one * value)
         );
         await UniTask.Delay(1000);
 
         // 少し小さくなる
-        DOTweenHelper.LerpAsync(2f, 1.5f, 0.5f, Ease.InOutQuad, (value) => startTextGoRt.localScale = Vector3.one * value);
-        DOTweenHelper.LerpAsync(1f, 0f, 0.5f, Ease.InOutQuad, (value) => startTextGoCg.alpha = value);
+        DOTweenHelper.LerpAsync(4f, 2f, 0.3f, Ease.InOutQuad, (value) => startTextGoRt.localScale = Vector3.one * value);
+        DOTweenHelper.LerpAsync(1f, 0f, 0.3f, Ease.InOutQuad, (value) => startTextGoCg.alpha = value);
 
         // UiCanvasのフェードイン
         uiCanvasCg.alpha = 0f;
