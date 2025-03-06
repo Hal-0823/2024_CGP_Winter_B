@@ -16,6 +16,7 @@ public class StageSelector : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.I.PlayBGM(BGM.Name.StageSelect);
         selectId = 0;
         rotationSpeed = 20.0f;
 
@@ -85,5 +86,10 @@ public class StageSelector : MonoBehaviour
         Stage[selectId].gameObject.SetActive(true);
         ApplyStageInfo();
         transform.rotation = Quaternion.identity;
+    }
+
+    public StageInfo GetStageInfo()
+    {
+        return Stage[selectId];
     }
 }

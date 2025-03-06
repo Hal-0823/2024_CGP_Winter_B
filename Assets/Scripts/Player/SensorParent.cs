@@ -27,7 +27,8 @@ public class SensorParent : MonoBehaviour
     void Start()
     {
         gameProduction = Camera.main.GetComponent<GameProduction>();
-        scoreManager = GameObject.Find("ScoreManager(Clone)").GetComponent<ScoreManager>();
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        
         score=0;
     }
     void OnDestroy()

@@ -1315,8 +1315,8 @@ GameObject:
   - component: {fileID: 1490320606489110446}
   - component: {fileID: 518687639245032948}
   - component: {fileID: 2669454093847251273}
-  - component: {fileID: 5308652734147280531}
   - component: {fileID: -1095575615802302058}
+  - component: {fileID: 5308652734147280531}
   - component: {fileID: 7132918171786801209}
   m_Layer: 6
   m_Name: BULL(0)_B1E
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHitWallAction: {fileID: 11400000, guid: 52432f3daff02404b9a8906ba6d0efa6, type: 2}
-  Speed: 4
+  Speed: 4.2
 --- !u!64 &1490320606489110446
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1450,28 +1450,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!95 &5308652734147280531
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8959187461258574251}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b5305397300fe8f469df89a361f47f06, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!198 &-1095575615802302058
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -6204,6 +6182,28 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!95 &5308652734147280531
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959187461258574251}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b5305397300fe8f469df89a361f47f06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!199 &7132918171786801209
 ParticleSystemRenderer:
   serializedVersion: 6
