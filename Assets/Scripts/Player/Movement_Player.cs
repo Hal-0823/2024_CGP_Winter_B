@@ -51,7 +51,7 @@ public class Movement_Player : Information_Player
             isMoving = direction != Vector3.zero;
 
             //シフトでローリング
-            if((Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3)||Input.GetKeyDown(KeyCode.Mouse2))&&!cantOperate&&canRoll&&!PoseManager.isPose)
+            if((Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.Mouse3)||Input.GetKeyDown(KeyCode.Mouse1))&&!cantOperate&&canRoll&&!PoseManager.isPose)
             {
                 cantOperate = true;
                 canRoll = false;
@@ -77,7 +77,7 @@ public class Movement_Player : Information_Player
 
 
         // ジャンプ処理
-        if ((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse4)||Input.GetKeyDown(KeyCode.Mouse1)) && isGrounded&&canJump&&!cantOperate &&!PoseManager.isPose)
+        if ((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse4)||Input.GetKeyDown(KeyCode.Mouse0)) && isGrounded&&canJump&&!cantOperate &&!PoseManager.isPose)
         {
             animationPlayer.JumpAnimation();
             Jump();

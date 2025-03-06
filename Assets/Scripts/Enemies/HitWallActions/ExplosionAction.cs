@@ -8,19 +8,19 @@ public class ExplosionAction : OnHitWallAction
 
     public override void Execute(BullController bull, Collision col)
     {
-        skinnedMeshRenderer = bull.gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
+        /*skinnedMeshRenderer = bull.gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
 
         if (skinnedMeshRenderer == null)
         {
             Debug.LogError("SkinnedMeshRendererを取得できませんでした");
             return;
-        }
+        }*/
 
         ParticleSystem effect = Instantiate(Particle, bull.transform.position, Quaternion.identity);
 
         // Skinned Mesh Renderer を設定
-        var shape = effect.shape;
-        shape.skinnedMeshRenderer = skinnedMeshRenderer;
+        //var shape = effect.shape;
+        //shape.skinnedMeshRenderer = skinnedMeshRenderer;
 
         AudioManager.I.PlaySE(SE.Name.Explosion);
 
