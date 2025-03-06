@@ -975,9 +975,9 @@ MonoBehaviour:
   onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
   Speed: 5
   ChildBull: {fileID: 6672449617011189106, guid: 2e7e7dd1031fd974a97c0ec8d8da0280, type: 3}
-  SplitPoint: 2
-  SplitAngle: 120
-  SplitNum: 3
+  SplitPoint: 4
+  SplitAngle: 60
+  SplitNum: 2
 --- !u!64 &3736409877248043730
 MeshCollider:
   m_ObjectHideFlags: 0
