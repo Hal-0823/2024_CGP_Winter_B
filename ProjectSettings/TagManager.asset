@@ -11,6 +11,7 @@ TagManager:
   - EscapeSensor
   - Audience
   - Ice
+  - Stage
   layers:
   - Default
   - TransparentFX

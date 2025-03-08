@@ -19,7 +19,7 @@ public class DisplayScore : MonoBehaviour
         evaluationImage.sprite = evaluationSprite[evaluationNum];
     }
 
-    void Start()
+    void Awake()
     {
         evaluationImage = GameObject.Find("EvaluationImage").GetComponent<Image>();
         evaluationImage.enabled = false;
@@ -75,7 +75,7 @@ public class DisplayScore : MonoBehaviour
         else
         {scoreText.text = "Score:" + scoreManager.GetScore()+"\nCombo:x"+scoreManager.GetCombo();}
         beforeScore = scoreManager.GetScore();
-
+        
     }
     void DeleteEffect()
     {

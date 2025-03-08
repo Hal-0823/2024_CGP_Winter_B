@@ -326,6 +326,12 @@ MonoBehaviour:
     sEClip: {fileID: 8300000, guid: 179c969aea3ac6549aa5d785a1ccf6e9, type: 3}
   - seName: 5
     sEClip: {fileID: 8300000, guid: fb0b1b9e414fbdb429ca9a96525a7b3e, type: 3}
+  - seName: 10
+    sEClip: {fileID: 8300000, guid: 2d84f6b762dee364c96f5b2d273f0aef, type: 3}
+  - seName: 11
+    sEClip: {fileID: 8300000, guid: f070d78ae15a3b3499e83721dfd4b517, type: 3}
+  - seName: 12
+    sEClip: {fileID: 8300000, guid: e4940f806f0ae144baed65507fd7c615, type: 3}
   bgmList:
   - bgmName: 0
     bGMClip: {fileID: 8300000, guid: 537caf5cdd3728e4680fe2d83f77193b, type: 3}
