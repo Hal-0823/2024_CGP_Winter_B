@@ -44,36 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945fc19e975f84d4ca79ccf71bc70b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTime: 0
-  spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  playerPosition: {fileID: 0}
-  PhaseList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  GameTime: 0
+  SpawnPoints: []
+  Player: {fileID: 0}
+  PhaseList: []
