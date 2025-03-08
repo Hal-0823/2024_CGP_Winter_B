@@ -1159,12 +1159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54cf4461477422c4dbfefabc6c94537e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseDuration: 20
-  spawnInterval: 3
-  spawnTimer: 0
-  phaseStartTime: 0
-  enemyPrefab:
-  - {fileID: 6401992862425438986, guid: 72cbec4008575044687397c651f73b4c, type: 3}
 --- !u!4 &385122691
 Transform:
   m_ObjectHideFlags: 0
@@ -3717,13 +3711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54cf4461477422c4dbfefabc6c94537e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseDuration: 20
-  spawnInterval: 3
-  spawnTimer: 0
-  phaseStartTime: 0
-  enemyPrefab:
-  - {fileID: 5395585996645141722, guid: 0f9c575dcb1777d499431e33cca8eef8, type: 3}
-  - {fileID: 5395585996645141722, guid: 9f6d03f482abfa94cab1cf5f7d17c5d2, type: 3}
 --- !u!1001 &1148016642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5739,15 +5726,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54cf4461477422c4dbfefabc6c94537e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseDuration: 20
-  spawnInterval: 3
-  spawnTimer: 0
-  phaseStartTime: 0
-  enemyPrefab:
-  - {fileID: 8959187461258574251, guid: 2e7e7dd1031fd974a97c0ec8d8da0280, type: 3}
-  - {fileID: 8959187461258574251, guid: 474072f8929a07f49b149b6ea6835a7d, type: 3}
-  - {fileID: 8959187461258574251, guid: 60b3807091b83774ea792c2ac187c2f6, type: 3}
-  - {fileID: 8959187461258574251, guid: 6a5aad5e96f47d9478f4b3b889cdde25, type: 3}
 --- !u!1 &1785139727 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6174145e59ae6f345a3f4f0675a7bf0f, type: 3}

@@ -581,9 +581,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 523526772586406117, guid: c64fcf6bc686a5941a4a00a9fb2632f8, type: 3}
-  - {fileID: 8959187461258574251, guid: 2e7e7dd1031fd974a97c0ec8d8da0280, type: 3}
-  - {fileID: 8959187461258574251, guid: 23aa1766753f99d4fa79932895e73754, type: 3}
+  - {fileID: 3646874153945212175, guid: f4b68c4fe27ba204485ca2235b99d6a9, type: 3}
+  - {fileID: 5216563626393697381, guid: 64139c147395afc4882734dc69aa1542, type: 3}
+  - {fileID: 2368947646062799097, guid: 4cfa3ae7fec66e044995545b69057489, type: 3}
 --- !u!1 &247904815 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3705503393455592230, guid: d61bd752849b9644c86b33d30ef91445, type: 3}
@@ -1345,8 +1345,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 8959187461258574251, guid: 23aa1766753f99d4fa79932895e73754, type: 3}
-  - {fileID: 523526772586406117, guid: c64fcf6bc686a5941a4a00a9fb2632f8, type: 3}
+  - {fileID: 2368947646062799097, guid: 4cfa3ae7fec66e044995545b69057489, type: 3}
+  - {fileID: 3646874153945212175, guid: f4b68c4fe27ba204485ca2235b99d6a9, type: 3}
 --- !u!1 &820892146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3705503393455592230, guid: d61bd752849b9644c86b33d30ef91445, type: 3}
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 523526772586406117, guid: c64fcf6bc686a5941a4a00a9fb2632f8, type: 3}
+  - {fileID: 3646874153945212175, guid: f4b68c4fe27ba204485ca2235b99d6a9, type: 3}
 --- !u!1 &872877627 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3705503393455592230, guid: d61bd752849b9644c86b33d30ef91445, type: 3}
@@ -2433,7 +2433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 523526772586406117, guid: c64fcf6bc686a5941a4a00a9fb2632f8, type: 3}
+  - {fileID: 3646874153945212175, guid: f4b68c4fe27ba204485ca2235b99d6a9, type: 3}
 --- !u!1 &1399271856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,7 +2479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 8959187461258574251, guid: 23aa1766753f99d4fa79932895e73754, type: 3}
+  - {fileID: 2368947646062799097, guid: 4cfa3ae7fec66e044995545b69057489, type: 3}
 --- !u!4 &1402056872 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2385830792313561233, guid: d61bd752849b9644c86b33d30ef91445, type: 3}
