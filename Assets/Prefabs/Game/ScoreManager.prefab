@@ -45,8 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85737af91322fde4d927ded305b621e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  isCountScore: 0
 --- !u!114 &8407355158939878692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,5 +58,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabBorderImage: {fileID: 4475790257264479356, guid: 5dbb14a83acb6534a988897a4c3b150e, type: 3}
-  backGround: {fileID: 0}
-  evaluation: 
+  evaluationImage: {fileID: 0}
+  evaluationSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

@@ -68,7 +68,7 @@ public class FallingFloor : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!isTrigger && collision.gameObject.CompareTag("Player"))
+        if (!isTrigger && collision.gameObject.CompareTag("Player") && !GameManager.I.isStart)
         {
             isTrigger = true; // プレイヤーが接触したら開始
         }

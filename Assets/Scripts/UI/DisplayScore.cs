@@ -21,6 +21,7 @@ public class DisplayScore : MonoBehaviour
 
     void Start()
     {
+        evaluationImage = GameObject.Find("EvaluationImage").GetComponent<Image>();
         evaluationImage.enabled = false;
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
         scoreSlider = GameObject.Find("VOLTAGE").GetComponent<Slider>();
