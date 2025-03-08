@@ -136,7 +136,7 @@ public class Movement_Player : Information_Player
     void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Ground"))
         {
-            if(isGrounded==false)
+            if(isGrounded==false && !GameManager.I.isStart && GameManager.I.isOver)
             {
                 AudioManager.I.PlaySE(SE.Name.Jump);
                 isGrounded = true;

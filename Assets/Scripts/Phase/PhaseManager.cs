@@ -25,6 +25,7 @@ public class PhaseManager : MonoBehaviour
 
     void Start()
     {
+        Player = GameObject.FindWithTag("Player").transform;
         StartPhase();
     }
 

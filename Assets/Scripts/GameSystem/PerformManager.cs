@@ -18,7 +18,6 @@ public class PerformManager : MonoBehaviour
     private Image PanelIm;
     private CanvasGroup startTextGoCg;
     private CanvasGroup uiCanvasCg;
-    private RectTransform stageText;
     private CanvasGroup startTextReady;
     private RectTransform startTextGoRt;
     private AnimationPlayer animationPlayer;
@@ -29,12 +28,11 @@ public class PerformManager : MonoBehaviour
 
     void Start()
     {
-        GameObject panel = GameObject.Find("Panel");
+        GameObject panel = GameObject.Find("StartPanel");
         PanelCg = panel.GetComponent<CanvasGroup>();
         PanelIm = panel.GetComponent<Image>();
         animationPlayer = GameManager.I.player.GetComponent<AnimationPlayer>();
         cameraObj = GameManager.I.performCamera;
-
     }
 
     void Update()
@@ -70,17 +68,17 @@ public class PerformManager : MonoBehaviour
         await UniTask.Delay(1000);
         AudioManager.I.gameObject.SetActive(true);
         AudioManager.I.PlaySE(SE.Name.ExcellentReaction);
-        await UniTask.Delay(5500);
+        await UniTask.Delay(5000);
         AudioManager.I.PlaySE(SE.Name.Slide);
-        await UniTask.Delay(4500);
+        await UniTask.Delay(2500);
         AudioManager.I.PlaySE(SE.Name.Start);
     }
 
     private async UniTask OverPerformance()
     {
-        await UniTask.Delay(1000);
         AudioManager.I.PlaySE(SE.Name.Finish);
-        await DOTweenHelper.LerpAsync(1f, 0f, 0.5f, Ease.InOutQuad, (value) => uiCanvasCg.alpha = value);
+        await UniTask.Delay(2000);
+        await DOTweenHelper.LerpAsync(1f, 0f, 1f, Ease.InOutQuad, (value) => uiCanvasCg.alpha = value);
     }
 
     private async UniTask FinishPerformance()
@@ -105,17 +103,11 @@ public class PerformManager : MonoBehaviour
         await UniTask.Delay(750);
         movingFlag = false;
         animationPlayer.StopMoveAnimation();
-        stageText = GameObject.Find("StageText").GetComponent<RectTransform>();
         startTextReady = GameObject.Find("StartTextReady").GetComponent<CanvasGroup>();
         startTextGoRt = GameObject.Find("StartTextGo").GetComponent<RectTransform>();
         startTextGoCg = GameObject.Find("StartTextGo").GetComponent<CanvasGroup>();
         uiCanvasCg = GameManager.I.uiCanvas.GetComponent<CanvasGroup>();
         await UniTask.Delay(1250);
-        
-        // StageTextスライドイン & アウト
-        await DOTweenHelper.LerpAsync(new Vector2(-800f, 0f), new Vector2(-20f, 0f), 1f, Ease.InOutQuad, (value) => stageText.anchoredPosition = value);
-        await DOTweenHelper.LerpAsync(new Vector2(-20f, 0f), new Vector2(20f, 0f), 0.5f, Ease.InOutQuad, (value) => stageText.anchoredPosition = value);
-        await DOTweenHelper.LerpAsync(new Vector2(20f, 0f), new Vector2(800f, 0f), 1f, Ease.InOutQuad, (value) => stageText.anchoredPosition = value);
 
         // StartTextReadyが浮かび上がる
         await DOTweenHelper.LerpAsync(0f, 1f, 0.5f, Ease.InOutQuad, (value) => startTextReady.alpha = value);
