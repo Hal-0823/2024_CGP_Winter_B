@@ -9,6 +9,7 @@ public class DeadZone : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
+            GameManager.I.isFallen = true;
             Debug.Log("GAME OVER");
         }
     }

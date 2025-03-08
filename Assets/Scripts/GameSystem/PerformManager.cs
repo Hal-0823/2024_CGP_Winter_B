@@ -14,7 +14,8 @@ public class PerformManager : MonoBehaviour
     [SerializeField] private Quaternion cameraGameRot;
     [SerializeField] private Vector3 playerStartPos;
     [SerializeField] private Vector3 playerEndPos;
-    private CanvasGroup Panel;
+    private CanvasGroup PanelCg;
+    private Image PanelIm;
     private CanvasGroup startTextGoCg;
     private CanvasGroup uiCanvasCg;
     private RectTransform stageText;
@@ -28,23 +29,21 @@ public class PerformManager : MonoBehaviour
 
     void Start()
     {
-        Panel = GameObject.Find("Panel").GetComponent<CanvasGroup>();
-        stageText = GameObject.Find("StageText").GetComponent<RectTransform>();
-        startTextReady = GameObject.Find("StartTextReady").GetComponent<CanvasGroup>();
-        startTextGoRt = GameObject.Find("StartTextGo").GetComponent<RectTransform>();
-        startTextGoCg = GameObject.Find("StartTextGo").GetComponent<CanvasGroup>();
-        gameManager = FindAnyObjectByType<GameManager>();
-        animationPlayer = gameManager.player.GetComponent<AnimationPlayer>();
-        uiCanvasCg = gameManager.uiCanvas.GetComponent<CanvasGroup>();
-        cameraObj = gameManager.performCamera;
+        GameObject panel = GameObject.Find("Panel");
+        PanelCg = panel.GetComponent<CanvasGroup>();
+        PanelIm = panel.GetComponent<Image>();
+        animationPlayer = GameManager.I.player.GetComponent<AnimationPlayer>();
+        cameraObj = GameManager.I.performCamera;
+
     }
 
     void Update()
     {
-        if (gameManager != null && gameManager.isStartPerform && !hasStarted)
+        if (GameManager.I != null && GameManager.I.isStartPerform && !hasStarted)
         {
             hasStarted = true;
             StartPerformance().Forget();
+            StartSE().Forget();
             movingFlag = true;
         }
 
@@ -52,12 +51,48 @@ public class PerformManager : MonoBehaviour
         {
             animationPlayer.MoveAnimation(0.06f);
         }
+
+        if (GameManager.I != null && GameManager.I.isOverPerform && hasStarted)
+        {
+            hasStarted = false;
+            OverPerformance().Forget();
+        }
+
+        if (GameManager.I != null && GameManager.I.isFinishPerform && hasStarted)
+        {
+            hasStarted = false;
+            FinishPerformance().Forget();
+        }
+    }
+
+    private async UniTask StartSE()
+    {
+        await UniTask.Delay(1000);
+        AudioManager.I.gameObject.SetActive(true);
+        AudioManager.I.PlaySE(SE.Name.ExcellentReaction);
+        await UniTask.Delay(5500);
+        AudioManager.I.PlaySE(SE.Name.Slide);
+        await UniTask.Delay(4500);
+        AudioManager.I.PlaySE(SE.Name.Start);
+    }
+
+    private async UniTask OverPerformance()
+    {
+        await UniTask.Delay(1000);
+        AudioManager.I.PlaySE(SE.Name.Finish);
+        await DOTweenHelper.LerpAsync(1f, 0f, 0.5f, Ease.InOutQuad, (value) => uiCanvasCg.alpha = value);
+    }
+
+    private async UniTask FinishPerformance()
+    {
+
     }
 
     private async UniTask StartPerformance()
     {
-        DOTweenHelper.LerpAsync(1f, 0f, 1f, Ease.InOutQuad, (value) => Panel.alpha = value);
-        DOTweenHelper.LerpAsync(playerStartPos, playerEndPos, 5f, Ease.InOutQuad, (value) => gameManager.player.transform.position = value);
+        PanelIm.color = GameManager.I.themeColor;
+        DOTweenHelper.LerpAsync(1f, 0f, 1.5f, Ease.InOutQuad, (value) => PanelCg.alpha = value);
+        DOTweenHelper.LerpAsync(playerStartPos, playerEndPos, 5f, Ease.InOutQuad, (value) => GameManager.I.player.transform.position = value);
 
         //カメラの移動 & 回転
         await UniTask.WhenAll(
@@ -70,12 +105,17 @@ public class PerformManager : MonoBehaviour
         await UniTask.Delay(750);
         movingFlag = false;
         animationPlayer.StopMoveAnimation();
+        stageText = GameObject.Find("StageText").GetComponent<RectTransform>();
+        startTextReady = GameObject.Find("StartTextReady").GetComponent<CanvasGroup>();
+        startTextGoRt = GameObject.Find("StartTextGo").GetComponent<RectTransform>();
+        startTextGoCg = GameObject.Find("StartTextGo").GetComponent<CanvasGroup>();
+        uiCanvasCg = GameManager.I.uiCanvas.GetComponent<CanvasGroup>();
         await UniTask.Delay(1250);
         
         // StageTextスライドイン & アウト
-        await DOTweenHelper.LerpAsync(new Vector2(-800f, 0f), new Vector2(0f, 0f), 1.5f, Ease.InOutQuad, (value) => stageText.anchoredPosition = value);
-        await UniTask.Delay(1000);
-        await DOTweenHelper.LerpAsync(new Vector2(0f, 0f), new Vector2(800f, 0f), 1.5f, Ease.InOutQuad, (value) => stageText.anchoredPosition = value);
+        await DOTweenHelper.LerpAsync(new Vector2(-800f, 0f), new Vector2(-20f, 0f), 1f, Ease.InOutQuad, (value) => stageText.anchoredPosition = value);
+        await DOTweenHelper.LerpAsync(new Vector2(-20f, 0f), new Vector2(20f, 0f), 0.5f, Ease.InOutQuad, (value) => stageText.anchoredPosition = value);
+        await DOTweenHelper.LerpAsync(new Vector2(20f, 0f), new Vector2(800f, 0f), 1f, Ease.InOutQuad, (value) => stageText.anchoredPosition = value);
 
         // StartTextReadyが浮かび上がる
         await DOTweenHelper.LerpAsync(0f, 1f, 0.5f, Ease.InOutQuad, (value) => startTextReady.alpha = value);
@@ -91,13 +131,15 @@ public class PerformManager : MonoBehaviour
         await UniTask.Delay(1000);
 
         // 少し小さくなる
-        DOTweenHelper.LerpAsync(4f, 2f, 0.3f, Ease.InOutQuad, (value) => startTextGoRt.localScale = Vector3.one * value);
+        DOTweenHelper.LerpAsync(4f, 3f, 0.3f, Ease.InOutQuad, (value) => startTextGoRt.localScale = Vector3.one * value);
         DOTweenHelper.LerpAsync(1f, 0f, 0.3f, Ease.InOutQuad, (value) => startTextGoCg.alpha = value);
 
         // UiCanvasのフェードイン
         uiCanvasCg.alpha = 0f;
         await DOTweenHelper.LerpAsync(0f, 1f, 1f, Ease.InOutQuad, (value) => uiCanvasCg.alpha = value);
 
-        gameManager.isStartPerform = false;
+        GameManager.I.isStartPerform = false;
     }
+
+
 }
