@@ -50,5 +50,5 @@ MonoBehaviour:
   cameraStartRot: {x: -0.16317591, y: 0.33682415, z: -0.059391186, w: -0.9254165}
   cameraEndRot: {x: 0.10881793, y: -0.27386552, z: 0.03120302, w: 0.9550826}
   cameraGameRot: {x: 0.54463905, y: 0, z: 0, w: 0.83867055}
-  playerStartPos: {x: 0, y: 1.4, z: -7}
-  playerEndPos: {x: 0, y: 1.23, z: 0.5}
+  playerStartPos: {x: 0, y: 1.1, z: -7}
+  playerEndPos: {x: 0, y: 1.1, z: 0.5}

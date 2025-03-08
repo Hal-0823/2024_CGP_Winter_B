@@ -515,6 +515,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8065231720378027731, guid: fe8c43b783acd4d4bb34a2e73e30a91c, type: 3}
+      propertyPath: seList.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065231720378027731, guid: fe8c43b783acd4d4bb34a2e73e30a91c, type: 3}
+      propertyPath: seList.Array.data[9].sEClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d84f6b762dee364c96f5b2d273f0aef, type: 3}
+    - target: {fileID: 8065231720378027731, guid: fe8c43b783acd4d4bb34a2e73e30a91c, type: 3}
+      propertyPath: seList.Array.data[9].seName
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065231720378027731, guid: fe8c43b783acd4d4bb34a2e73e30a91c, type: 3}
+      propertyPath: seList.Array.data[10].sEClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f070d78ae15a3b3499e83721dfd4b517, type: 3}
+    - target: {fileID: 8065231720378027731, guid: fe8c43b783acd4d4bb34a2e73e30a91c, type: 3}
+      propertyPath: seList.Array.data[10].seName
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065231720378027731, guid: fe8c43b783acd4d4bb34a2e73e30a91c, type: 3}
+      propertyPath: seList.Array.data[11].sEClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e4940f806f0ae144baed65507fd7c615, type: 3}
+    - target: {fileID: 8065231720378027731, guid: fe8c43b783acd4d4bb34a2e73e30a91c, type: 3}
+      propertyPath: seList.Array.data[11].seName
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8224015179009374221, guid: fe8c43b783acd4d4bb34a2e73e30a91c, type: 3}
       propertyPath: m_Name
       value: App

@@ -115,7 +115,9 @@ public class SE
         GreatReaction,
         ExcellentReaction,
         Start,
-
+        Slide,
+        Finish,
+        
     }
 
     public Name seName;

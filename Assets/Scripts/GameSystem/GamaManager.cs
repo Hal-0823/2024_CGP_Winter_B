@@ -3,71 +3,99 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour //オブジェクトの生成、非アクティブを操作と演出用のフラグ管理をする
 {
-    public bool isStartPerform = true;
-    public bool isEndPerform;
-    public GameObject player;
-    public GameObject uiCanvas;
-    public GameObject performCamera;
-    public StatementPlayer statementPlayer;
-    public AnimationPlayer animationPlayer;
-    public Movement_Player movement_Player;
-    private GameObject phaseManager;
-    private GameObject scoreManager;
-    private bool isStart = true;
-    [SerializeField] private GameObject uiCanvasPrefab;
-    [SerializeField] private GameObject startCanvas;
-    [SerializeField] private GameObject endCanvas;
-    [SerializeField] private GameObject performManagerPrefab;
+    private Movement_Player movement_Player;
+    private GameObject scoreManagerObj;
+    private GameObject stageSystems;
+    private bool isOver = true;
+    private int score;
+    [HideInInspector] public static GameManager I;
+    [HideInInspector] public bool isStartPerform = true, isOverPerform = false, isFinishPerform = false, isEndPhase = false, isFallen = false, isStart = true;
+    [HideInInspector] public Color themeColor;
+    [HideInInspector] public GameObject player;
+    [HideInInspector] public GameObject uiCanvas;
+    [HideInInspector] public GameObject performCamera;
+    [HideInInspector] public AnimationPlayer animationPlayer;
+    [HideInInspector] public ScoreManager scoreManager;
+    [SerializeField] private GameObject stageSystemsPrefab;
+    [SerializeField] private GameObject phaseManager;
     [SerializeField] private GameObject playerPrefab;
-    [SerializeField] private GameObject phaseManagerPrefab;
-    [SerializeField] private GameObject scoreManagerPrefab;
     [SerializeField] private GameObject performCameraPrefab;
+    [SerializeField] private Result resultCanvas;
 
     void Awake()
     {
+        if(I == null)
+        {
+            I = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         // プレイヤーのインスタンス化とスクリプトの取得
-        player = Instantiate(playerPrefab);
-        //statementPlayer = player.GetComponent<StatementPlayer>();
+        player = Instantiate(playerPrefab, new Vector3(0f, 1.1f, -7f), Quaternion.identity);
         animationPlayer = player.GetComponent<AnimationPlayer>();
         movement_Player = player.GetComponent<Movement_Player>();
         movement_Player.cantOperate = true;
 
         // キャンバスの表示
-        uiCanvas = Instantiate(uiCanvasPrefab);
-        Instantiate(startCanvas);
-        Instantiate(endCanvas);
-
+        stageSystems = Instantiate(stageSystemsPrefab);
+        uiCanvas = stageSystems.transform.Find("StageCanvas")?.gameObject;
+        
         // PerformManagerのインスタンス化
         performCamera = Instantiate(performCameraPrefab);
-        Instantiate(performManagerPrefab);
 
         // PerformManagerの演出開始フラグを立てる
+        phaseManager.SetActive(false);
+        AudioManager.I.gameObject.SetActive(false);
         isStartPerform = true;
     }
 
     public void GameStart()
     {
         // PhaseManagerとScoreManagerのインスタンス化
-        phaseManager = Instantiate(phaseManagerPrefab);
-        scoreManager = Instantiate(scoreManagerPrefab);
+        movement_Player.cantOperate = false;
+        AudioManager.I.PlayBGM(BGM.Name.Stage_1);
+        phaseManager.SetActive(true);
+        scoreManagerObj = stageSystems.transform.Find("StageCanvas")?.gameObject;
+        scoreManager = scoreManagerObj.GetComponent<ScoreManager>();
     }
 
     void Update()
     {
-        if(!isStartPerform && isStart)
+        if(isStart && !isStartPerform)
         {
             GameStart();
             isStart = false;
         }
+
+        if(isOver && isFallen)
+        {
+            // PerformManagerの終了演出開始
+            isOver = false;
+            isOverPerform = true;
+            Invoke("GameOver", 0.1f);
+            phaseManager.SetActive(false);
+            scoreManagerObj.SetActive(false);
+            Time.timeScale = 0.1f;
+        }
+
+        if(isOver && isEndPhase)
+        {
+            // PerformManagerの終了演出開始
+            isOver = false;
+            isFinishPerform = true;
+            score = scoreManager.score;
+            Invoke("GameOver", 0.1f);
+            phaseManager.SetActive(false);
+            scoreManagerObj.SetActive(false);
+            Time.timeScale = 0.1f;
+        }
     }
     public void GameOver()
     {
-        // PerformManagerの終了演出開始
-        isEndPerform = true;
-
-        // UI・PhaseManager・ScoreManagerを非アクティブ化
-        uiCanvas.SetActive(false);
-        phaseManager.SetActive(false);
-        scoreManager.SetActive(false);
+        var result = Instantiate(resultCanvas);
+        result.Initialize(score);
+        Time.timeScale = 0f;
     }
 }

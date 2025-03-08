@@ -53,6 +53,7 @@ public class PhaseManager : MonoBehaviour
         if (currentIndex >= phaseList.Count)
         {
             Debug.Log("すべてのフェーズが終わりました！");
+            GameManager.I.isEndPhase = true;
             return;
         } 
 
