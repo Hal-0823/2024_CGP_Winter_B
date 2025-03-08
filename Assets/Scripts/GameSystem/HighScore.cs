@@ -101,7 +101,7 @@ public class HighScore : MonoBehaviour
         //星の数が増えたらUserDataに保存
         if(star>starNum[stageNum-1])
         {
-            UserData.I.AddStar(star-starNum[stageNum-1]);
+            //UserData.I.AddStar(star-starNum[stageNum-1]);
             starNum[stageNum-1] = star;
         }
         return star;
