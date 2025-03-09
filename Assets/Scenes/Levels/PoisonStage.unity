@@ -7203,9 +7203,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &2497114986079752556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8903,9 +8903,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &3719565322824766839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9023,9 +9023,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &3840184772219277436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9461,9 +9461,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &4070028616278261232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9801,9 +9801,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &4248713347354811639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10428,9 +10428,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &4750658633984186909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10474,9 +10474,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &4756638502360639294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10848,9 +10848,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &4976470096814286748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10947,9 +10947,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5004660594286846440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11145,9 +11145,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5106396915554011273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11223,9 +11223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5171952088185008839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11329,9 +11329,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5244107037078576615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11616,9 +11616,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5396210181066956120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11727,9 +11727,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5485891886138430963
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11793,9 +11793,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5519660879410137466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11960,9 +11960,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5655943661370038448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12086,9 +12086,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5695857499375310052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12253,9 +12253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5861454603122024328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12364,9 +12364,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &5936903739441414064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12527,9 +12527,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6012214266728052061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12573,9 +12573,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6035276923303085225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12671,9 +12671,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6081597742636538092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12749,9 +12749,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6096240649388531591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12891,9 +12891,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6186737458993327431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12944,9 +12944,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6226643285398028911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12990,9 +12990,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6231585231033730739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13043,9 +13043,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6244659796336464707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13244,9 +13244,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6427944620312905526
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13297,9 +13297,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6443232219669843225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13408,9 +13408,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6466964758247766048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13572,9 +13572,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6585781513609857536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13700,9 +13700,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6659609946874872704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13863,9 +13863,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6707107910566156939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13946,9 +13946,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6709147850007404536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13999,9 +13999,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6722756089995240334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14162,9 +14162,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6782032970504048294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14215,9 +14215,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6783477180020774738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14368,9 +14368,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6897740557151223955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14434,9 +14434,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6950909515702783920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14507,9 +14507,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6958694007797576841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14553,9 +14553,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6972837361196033272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14611,9 +14611,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6985765545948716432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14694,9 +14694,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &6996313953842553985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14800,9 +14800,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7062700276913266642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14952,9 +14952,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7178240932341893368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15050,9 +15050,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7205979754725551146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15191,9 +15191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7284848832375346740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15249,9 +15249,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7305748411046654491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15350,9 +15350,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7329848872770830442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15551,9 +15551,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7442126497410340698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15609,9 +15609,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7449361986657665865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15682,9 +15682,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7491999293011097324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15728,9 +15728,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7497300470777616089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15774,9 +15774,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7503284705367875851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15872,9 +15872,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7527402976482015602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15925,9 +15925,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7532974730372070074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16159,9 +16159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7637395496512627965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16205,9 +16205,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7641555681990641454
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16263,9 +16263,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7660505220601395727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16414,9 +16414,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7712993540440450812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16505,9 +16505,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7718596319783246460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16558,9 +16558,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7722409505747651069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16641,9 +16641,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7732701505136025132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16687,9 +16687,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7740091322710518575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16805,9 +16805,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7793169398765150296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16851,9 +16851,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7811621535552459376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16897,9 +16897,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7818574368162195395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16955,9 +16955,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7833429139213643240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17001,9 +17001,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7842344359200690226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17099,9 +17099,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7846711676946931340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17152,9 +17152,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7859966775609745663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17225,9 +17225,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7924253609720532110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17308,9 +17308,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7929282527681249600
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17391,9 +17391,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7952090222603095684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17444,9 +17444,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7961282722730879218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17490,9 +17490,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &7966641253858917595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17552,9 +17552,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8010908278296178901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17610,9 +17610,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8016603389634978595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17693,9 +17693,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8021787715015119991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17746,9 +17746,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8029019745592350916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17804,9 +17804,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8030227662278994203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17862,9 +17862,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8030642614047588276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17945,9 +17945,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8043239047364933197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17991,9 +17991,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8059969208859146195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18049,9 +18049,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8075180338365917765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18132,9 +18132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8084583211815823804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18190,9 +18190,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8087491550891841550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18273,9 +18273,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8090413695908262158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18346,9 +18346,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8130141462855394338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18429,9 +18429,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8150362535588844079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18487,9 +18487,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8159624558098377584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18570,9 +18570,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8195601930593639471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18628,9 +18628,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8198860924581420241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18726,9 +18726,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8210386694757586265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18772,9 +18772,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8217967315987245051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18818,9 +18818,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8222252894785147614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18864,9 +18864,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8233149853788631242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18922,9 +18922,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8238298335185810501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18968,9 +18968,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8257319343437758911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19051,9 +19051,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8342190410204935902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19132,9 +19132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8379160775458780950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19215,9 +19215,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8404868325287217979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19261,9 +19261,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8421566641254595281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19327,9 +19327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8432485541373629564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19385,9 +19385,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8453584473334645452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19446,9 +19446,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8475039688629288035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19529,9 +19529,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8518767752191742855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19587,9 +19587,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8519393160299342050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19640,9 +19640,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8536250954624496546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19753,9 +19753,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8609723191869320516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19836,9 +19836,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8678143983969777240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19889,9 +19889,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8696791474428946397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19947,9 +19947,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8734152068827403858
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20038,9 +20038,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8760193131749547424
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20084,9 +20084,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8770481343517340140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20137,9 +20137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8786801579692740296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20195,9 +20195,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8813740449075541665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20241,9 +20241,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8828969521111653702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20287,9 +20287,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8850533056830877784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20413,9 +20413,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8975810831466208568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20471,9 +20471,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &8987684833423966061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20554,9 +20554,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9006493595260053160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20612,9 +20612,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9014163145543361427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20665,9 +20665,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9039648362872344907
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20748,9 +20748,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9063183862588007207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20794,9 +20794,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9088949685305004495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20852,9 +20852,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9099781921661892001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20910,9 +20910,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9105521625112868468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20968,9 +20968,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9122639238819087717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21051,9 +21051,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9136703330496283702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21104,9 +21104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9146558539551721572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21162,9 +21162,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9147121657655736758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21220,9 +21220,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9152346719578497224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21266,9 +21266,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9172132362516779688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21349,9 +21349,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9184444216764305710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21402,9 +21402,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9201007587011841081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21460,9 +21460,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 4
   firstDescendRange: 0.1
-  waitTime: 2
+  waitTime: 3.5
   accel: 1.8
-  repopTime: 9
+  repopTime: 6
 --- !u!65 &9213201845240115666
 BoxCollider:
   m_ObjectHideFlags: 0
