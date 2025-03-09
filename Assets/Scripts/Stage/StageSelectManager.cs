@@ -4,6 +4,12 @@ using UnityEngine.UI;
 public class StageSelectManager : MonoBehaviour
 {
     [SerializeField] private StageSelector stageSelector;
+    [SerializeField] private GameObject optionPanel;
+
+    void Awake()
+    {
+        optionPanel.SetActive(false);
+    }
 
     public void OnClickPlay()
     {
@@ -33,9 +39,15 @@ public class StageSelectManager : MonoBehaviour
         FadeManager.I.LoadSceneWithFade("Title", Color.black, 2.0f);
     }
 
-    public void OnClickShop()
+    public void OnClickOption()
     {
         AudioManager.I.PlaySE(SE.Name.Click);
-        //FadeManager.I.LoadSceneWithFade("Shop", Color.black, 2.0f);
+        optionPanel.SetActive(true);
+    }
+
+    public void OnClickBackOption()
+    {
+        AudioManager.I.PlaySE(SE.Name.Click);
+        optionPanel.SetActive(false);
     }
 }
