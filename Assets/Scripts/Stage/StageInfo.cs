@@ -1,9 +1,20 @@
 using UnityEngine;
 
+/// <summary>
+/// ステージの情報を格納しているクラス
+/// </summary>
 public class StageInfo : MonoBehaviour
 {
+    public int StageIndex;
     public string StageName;
     public string SceneName;
-    public int BestScore;
     public Color ThemeColor;
+    public int BestScore { get; private set; }
+    public int StarNum { get; private set; }
+
+    void OnEnable()
+    {
+        BestScore = UserData.I.GetBestScore(StageIndex);
+        StarNum = UserData.I.GetStarCount(StageIndex);
+    }
 }

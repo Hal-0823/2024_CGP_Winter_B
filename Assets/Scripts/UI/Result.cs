@@ -16,10 +16,13 @@ public class Result : MonoBehaviour
     private float targetScore = 0f;
     private float currentScore = 0f;
 
-    public void Initialize(int finalScore)
+    public void Initialize(int finalScore, string anim)
     {
         Voltage.Initialize();
         targetScore = finalScore;
+
+        Animator animator = GetComponent<Animator>();
+        animator.SetTrigger(anim);
     }
 
     /// <summary>
@@ -68,6 +71,7 @@ public class Result : MonoBehaviour
     {
         AudioManager.I.PlaySE(SE.Name.Click);
         AudioManager.I.StopBGM();
-        FadeManager.I.LoadSceneWithFade(HighScore.I.GetNowStageName(), 2.0f);
+        var stageInfo = UserData.I.GetCurrentStageInfo();
+        FadeManager.I.LoadSceneWithFade(stageInfo.SceneName, 2.0f);
     }
 }

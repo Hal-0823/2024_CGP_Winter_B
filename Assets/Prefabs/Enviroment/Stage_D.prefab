@@ -3399,8 +3399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400d00f0b9e5da24ebfabd2f3ad33ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StageIndex: 3
   StageName: Factory Stage
-  BestScore: 6000
+  SceneName: FactoryStage
   ThemeColor: {r: 0.23137255, g: 0.23137255, b: 0.23137255, a: 1}
 --- !u!1 &2253695103449237157
 GameObject:

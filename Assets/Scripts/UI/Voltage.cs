@@ -14,12 +14,14 @@ public class Voltage : MonoBehaviour
 
     public void Initialize()
     {
-        for (int i = 1; i <= 3; i++)
+        var stageInfo = UserData.I.GetCurrentStageInfo();
+        var borderScore = BorderScoreTable.GetBorderScores(stageInfo.StageIndex);
+        for (int i = 0; i <= 2; i++)
         {
-            float borderX = 800f*(float)(HighScore.I.GetBorderScore(i)) / (HighScore.I.GetBorderScore(3));
-            borderLine[i-1] = Instantiate(BorderLineObj, BackGround.transform);
-            borderLine[i-1].transform.localPosition = new Vector3((borderX-400f), 0, 0);
-            borderLine[i-1].SetScore(HighScore.I.GetBorderScore(i));
+            float borderX = 800f*(float)(borderScore[0]) / (borderScore[2]);
+            borderLine[i] = Instantiate(BorderLineObj, BackGround.transform);
+            borderLine[i].transform.localPosition = new Vector3((borderX-400f), 0, 0);
+            borderLine[i].SetScore(borderScore[i]);
             Debug.Log("borderRatio:" + borderX);
         }
 

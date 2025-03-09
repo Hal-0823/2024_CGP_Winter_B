@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
         set 
         { 
             Score = value;
-
+            /*
             if(Score>=HighScore.I.GetBorderScore(1)&&Score<HighScore.I.GetBorderScore(2))
             {displayScore.BorderEffect(1);}
             else if(Score>=HighScore.I.GetBorderScore(2)&&Score<HighScore.I.GetBorderScore(3))
@@ -23,8 +23,10 @@ public class ScoreManager : MonoBehaviour
             {displayScore.BorderEffect(3);}
             else
             {displayScore.BorderEffect(0);}
+            */
         }
     }
+
     DisplayScore displayScore;
     private int timeScore = 0;
     float time = 0;
@@ -42,8 +44,6 @@ public class ScoreManager : MonoBehaviour
     void OnDestroy()
     {
         isCountScore = false;
-        HighScore.I.SaveHighScore(score);
-
     }
 
 

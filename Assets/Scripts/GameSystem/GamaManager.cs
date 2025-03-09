@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
     public void ResultAppear()
     {
         var result = Instantiate(resultCanvas);
+
         result.Initialize(score);
     }
     void GameOver()

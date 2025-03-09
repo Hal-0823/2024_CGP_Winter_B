@@ -6,7 +6,8 @@ public class UserData : MonoBehaviour
 
     private int[] stageStars; // 各ステージの星の数
     private int[] bestScores; // 各ステージのベストスコア
-    private const string StarKey = "StageStar_"; // 保存キーのプレフィックス
+    private StageInfo currentStageInfo; // 現在のステージ情報(保存はしない)
+    private const string StarKey = "StageStar_"; // 星の保存キー
     private const string ScoreKey = "BestScore_"; // スコアの保存キー
 
     private void Awake()
@@ -73,5 +74,10 @@ public class UserData : MonoBehaviour
             return bestScores[stageIndex];
         }
         return 0;
+    }
+
+    public StageInfo GetCurrentStageInfo()
+    {
+        return currentStageInfo;
     }
 }
