@@ -2,11 +2,11 @@ using UnityEngine;
 
 /// <summary>
 /// 以下を同時に行う
-/// 円周上を時計回りに１つ飛ばしで闘牛を発生させる
+/// 円周上を反時計回りに１つ飛ばしで闘牛を発生させる
 /// 円周上を反時計回りに１つ飛ばしで闘牛を発生させる
 /// スポーンを終えると次のフェーズへ移行する
 /// </summary>
-public class Phase_V4 : PhaseBase
+public class Phase_V5 : PhaseBase
 {
     private int spawnId_v1;
     private int spawnId_v3;
@@ -32,8 +32,8 @@ public class Phase_V4 : PhaseBase
             return;
         }
 
-        spawnId_v1 = SpawnEnemy_V1(manager, spawnId_v1);
-        spawnId_v3 = SpawnEnemy_V1(manager, spawnId_v3);
+        spawnId_v1 = SpawnEnemy_V3(manager, spawnId_v1);
+        spawnId_v3 = SpawnEnemy_V3(manager, spawnId_v3);
     }
 
     private int SpawnEnemy_V1(PhaseManager manager, int spawnId)

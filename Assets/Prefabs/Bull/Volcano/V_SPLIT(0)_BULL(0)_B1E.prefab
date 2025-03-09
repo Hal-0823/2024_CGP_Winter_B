@@ -630,7 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
   Speed: 5
-  ChildBull: {fileID: 6672449617011189106, guid: 474072f8929a07f49b149b6ea6835a7d, type: 3}
+  ChildBull: {fileID: 6474049748740780557, guid: be3066d37195dde4d98f100a3d1050e2, type: 3}
   SplitPoint: 2
   SplitAngle: 60
   SplitNum: 2
