@@ -65,10 +65,10 @@ public class PerformManager : MonoBehaviour
 
     private async UniTask StartSE()
     {
-        await UniTask.Delay(1000);
         AudioManager.I.gameObject.SetActive(true);
+        await UniTask.Delay(500);
         AudioManager.I.PlaySE(SE.Name.ExcellentReaction);
-        await UniTask.Delay(5000);
+        await UniTask.Delay(5500);
         AudioManager.I.PlaySE(SE.Name.Slide);
         await UniTask.Delay(2500);
         AudioManager.I.PlaySE(SE.Name.Start);
