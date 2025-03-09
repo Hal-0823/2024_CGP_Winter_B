@@ -17,12 +17,15 @@ public class PoseButtonManager : MonoBehaviour
     
     public void ContinueGame()
     {
+        AudioManager.I.PlaySE(SE.Name.Click);
         Destroy(this.gameObject);
         Time.timeScale = 1.0f; 
         PoseManager.isPose = false;
     }
     public void GoTitle()
     {
+        AudioManager.I.PlaySE(SE.Name.Click);
+        AudioManager.I.StopBGM();
         ScoreManager.isCountScore = false;
         Destroy(this.gameObject);
         Time.timeScale = 1.0f;
@@ -31,6 +34,8 @@ public class PoseButtonManager : MonoBehaviour
     }
     public void ReTry()
     {
+        AudioManager.I.PlaySE(SE.Name.Click);
+        AudioManager.I.StopBGM();
         ScoreManager.isCountScore = false;
         Destroy(this.gameObject);
         Time.timeScale = 1.0f;
