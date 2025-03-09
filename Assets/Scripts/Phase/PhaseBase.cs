@@ -13,7 +13,7 @@ public abstract class PhaseBase : MonoBehaviour, IGamePhase
         spawnTimer = 0f;
 
         // EnterStateした時点での時間を代入
-        phaseStartTime += manager.GameTime;
+        phaseStartTime = manager.GameTime;
     }
 
     public virtual void UpdateState(PhaseManager manager)
