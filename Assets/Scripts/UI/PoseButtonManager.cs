@@ -35,6 +35,8 @@ public class PoseButtonManager : MonoBehaviour
         Destroy(this.gameObject);
         Time.timeScale = 1.0f;
         PoseManager.isPose = false;
-        FadeManager.I.LoadSceneWithFade(HighScore.I.GetNowStageName(), 2.0f);
+
+        var stageInfo = UserData.I.GetCurrentStageInfo();
+        FadeManager.I.LoadSceneWithFade(stageInfo.SceneName, 2.0f);
     }
 }

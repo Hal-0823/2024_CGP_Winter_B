@@ -819,8 +819,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400d00f0b9e5da24ebfabd2f3ad33ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StageIndex: 1
   StageName: Poison Stage
-  BestScore: 1000
+  SceneName: PoisonStage
   ThemeColor: {r: 0.7283019, g: 0.21299385, b: 0.5774772, a: 1}
 --- !u!1 &291521624169331839
 GameObject:

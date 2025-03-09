@@ -12687,8 +12687,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400d00f0b9e5da24ebfabd2f3ad33ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StageIndex: 0
   StageName: Normal Stage
-  BestScore: 1000
+  SceneName: NormalStage
   ThemeColor: {r: 0.9169811, g: 0.9169811, b: 0.9169811, a: 1}
 --- !u!1 &7786580756712987155
 GameObject:

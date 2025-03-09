@@ -14,6 +14,8 @@ public class DisplayScore : MonoBehaviour
     private GameObject[] border=new GameObject[3];
     public Image evaluationImage;
     public Sprite[] evaluationSprite=new Sprite[3];
+    private int[] borderScore;
+
     public void SetEvaluationImage(int evaluationNum)
     {
         evaluationImage.sprite = evaluationSprite[evaluationNum];
@@ -29,13 +31,16 @@ public class DisplayScore : MonoBehaviour
         backGround = GameObject.Find("VoltageBackground");
         scoreManager = GetComponent<ScoreManager>();
         beforeScore = scoreManager.GetScore();
-        for (int i = 1; i <= 3; i++)
+
+        var stageInfo = UserData.I.GetCurrentStageInfo();
+        borderScore = BorderScoreTable.GetBorderScores(stageInfo.StageIndex);
+        for (int i = 0; i <= 2; i++)
         {
-            float borderX = 800f*(float)(HighScore.I.GetBorderScore(i) + 5000f) / (HighScore.I.GetBorderScore(3) + 5000f);
-            border[i-1] = Instantiate(prefabBorderImage, backGround.transform);
-            border[i-1].transform.localPosition = new Vector3((borderX-400f), 0, 0);
-            TextMeshProUGUI borderText = border[i - 1].transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-            borderText.text = HighScore.I.GetBorderScore(i).ToString();
+            float borderX = 800f*(float)(borderScore[0] + 5000f) / (borderScore[2] + 5000f);
+            border[i] = Instantiate(prefabBorderImage, backGround.transform);
+            border[i].transform.localPosition = new Vector3((borderX-400f), 0, 0);
+            TextMeshProUGUI borderText = border[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            borderText.text = borderScore[i].ToString();
             Debug.Log("borderRatio:" + borderX);
         }
     }
@@ -49,7 +54,7 @@ public class DisplayScore : MonoBehaviour
     
     float AchivementRate()
     {
-        return ((float)(scoreManager.GetScore()+5000f)/(HighScore.I.GetBorderScore(3)+5000f));
+        return ((float)(scoreManager.GetScore()+5000f)/(borderScore[2]+5000f));
     }
     void Update()
     {

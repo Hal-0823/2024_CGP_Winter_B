@@ -6495,8 +6495,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400d00f0b9e5da24ebfabd2f3ad33ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StageIndex: 4
   StageName: Volcano Stage
-  BestScore: 500
+  SceneName: VolcanoStage
   ThemeColor: {r: 0.90943396, g: 0.16972223, b: 0, a: 1}
 --- !u!1 &3774795884299928274
 GameObject:
