@@ -10,6 +10,7 @@ public class StageSelector : MonoBehaviour
     public StageInfo[] Stage;
     public TextMeshProUGUI StageNameText;
     public TextMeshProUGUI BestScoreText;
+    public Star[] stars; 
     public Image BackGroundImage;
     private int selectId;
     private float rotationSpeed;
@@ -48,7 +49,21 @@ public class StageSelector : MonoBehaviour
     private void ApplyStageInfo()
     {
         StageNameText.text = Stage[selectId].StageName;
-        BestScoreText.text = $"BestScore:{Stage[selectId].BestScore}";
+        BestScoreText.text = $"BestScore: {Stage[selectId].BestScore}";
+
+        // 星のUIを星の取得数に応じて変更
+        for (int i=0; i<stars.Length; i++)
+        {
+            if (i < Stage[selectId].StarNum)
+            {
+                stars[i].SetState(true);
+            }
+            else
+            {
+                stars[i].SetState(false);
+            }
+        }
+
         BackGroundImage.color = Stage[selectId].ThemeColor;
     }
 
