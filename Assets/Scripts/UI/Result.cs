@@ -30,7 +30,8 @@ public class Result : MonoBehaviour
     private void SaveResult(int finalScore)
     {
         int star = 0;
-        for ( ; finalScore <= Voltage.GetBorderScore(star); star++);
+        for ( ; finalScore >= Voltage.GetBorderScore(star); star++);
+        
         var stageInfo = UserData.I.GetCurrentStageInfo();
         UserData.I.SaveStageResult(stageInfo.StageIndex, finalScore, star);
     }

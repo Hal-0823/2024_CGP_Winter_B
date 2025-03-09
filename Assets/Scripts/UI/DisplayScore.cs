@@ -21,8 +21,9 @@ public class DisplayScore : MonoBehaviour
         evaluationImage.sprite = evaluationSprite[evaluationNum];
     }
 
-    void Awake()
+    public void Initialize()
     {
+        Debug.Log("DisplayScore Initialize");
         evaluationImage = GameObject.Find("EvaluationImage").GetComponent<Image>();
         evaluationImage.enabled = false;
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
@@ -36,7 +37,7 @@ public class DisplayScore : MonoBehaviour
         borderScore = BorderScoreTable.GetBorderScores(stageInfo.StageIndex);
         for (int i = 0; i <= 2; i++)
         {
-            float borderX = 800f*(float)(borderScore[0] + 5000f) / (borderScore[2] + 5000f);
+            float borderX = 800f*(float)(borderScore[i] + 5000f) / (borderScore[2] + 5000f);
             border[i] = Instantiate(prefabBorderImage, backGround.transform);
             border[i].transform.localPosition = new Vector3((borderX-400f), 0, 0);
             TextMeshProUGUI borderText = border[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>();
@@ -44,18 +45,18 @@ public class DisplayScore : MonoBehaviour
             Debug.Log("borderRatio:" + borderX);
         }
     }
+
     void OnDestroy()
     {
         DeleteEffect();
         scoreText.text = "";
     }
 
-
-    
     float AchivementRate()
     {
         return ((float)(scoreManager.GetScore()+5000f)/(borderScore[2]+5000f));
     }
+
     void Update()
     {
         
@@ -82,24 +83,30 @@ public class DisplayScore : MonoBehaviour
         beforeScore = scoreManager.GetScore();
         
     }
+
     void DeleteEffect()
     {
         effectScoreText.text = "";
         evaluationImage.enabled = false;
     }
 
-    public void BorderEffect(int borderNum)
+    public void BorderEffect(int score)
     {
+        int borderNum;
+
+        if      (score >= borderScore[2]) { borderNum =  2; }
+        else if (score >= borderScore[1]) { borderNum =  1; }
+        else if (score >= borderScore[0]) { borderNum =  0; }
+        else                              { borderNum = -1; }
+        
         for (int i = 0; i < 3; i++)
         {
             border[i].GetComponent<Image>().color = Color.white;
         }
-        if(borderNum>0)
+ 
+        for (int i = 0; i <= borderNum; i++)
         {
-            for (int i = 1; i <= borderNum; i++)
-            {
-                border[i-1].GetComponent<Image>().color = Color.red;
-            }
+            border[i].GetComponent<Image>().color = Color.red;
         }
     }
     

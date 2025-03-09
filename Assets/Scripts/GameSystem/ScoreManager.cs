@@ -2,31 +2,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private int Score; // スコア
-    public int score
-    {
-        get 
-        {
-            
-            return Score;
-        }
-
-        set 
-        { 
-            Score = value;
-            /*
-            if(Score>=HighScore.I.GetBorderScore(1)&&Score<HighScore.I.GetBorderScore(2))
-            {displayScore.BorderEffect(1);}
-            else if(Score>=HighScore.I.GetBorderScore(2)&&Score<HighScore.I.GetBorderScore(3))
-            {displayScore.BorderEffect(2);}
-            else if(Score>HighScore.I.GetBorderScore(3))
-            {displayScore.BorderEffect(3);}
-            else
-            {displayScore.BorderEffect(0);}
-            */
-        }
-    }
-
+    private int score; // スコア
     DisplayScore displayScore;
     private int timeScore = 0;
     float time = 0;
@@ -34,13 +10,15 @@ public class ScoreManager : MonoBehaviour
     public static bool isCountScore = false;
     private AudienceController audience;    // ステージの観客を制御するクラス
 
-    void Start()
+    void Awake()
     {
         displayScore = this.gameObject.GetComponent<DisplayScore>();
-        score = 0;
         isCountScore = true;
         audience = GameObject.FindWithTag("Audience").GetComponent<AudienceController>();
+        displayScore.Initialize();
+        SetScore(0);
     }
+    
     void OnDestroy()
     {
         isCountScore = false;
@@ -102,6 +80,12 @@ public class ScoreManager : MonoBehaviour
     public int GetScore()
     {
         return score;
+    }
+
+    private void SetScore(int score)
+    {
+        this.score = score;
+        displayScore.BorderEffect(score);
     }
 
     public int GetCombo()
