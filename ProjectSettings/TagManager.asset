@@ -12,6 +12,7 @@ TagManager:
   - Audience
   - Ice
   - Stage
+  - GoldBull
   layers:
   - Default
   - TransparentFX

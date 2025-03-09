@@ -14,7 +14,7 @@ public class HomingBull : BullController
     public override void Initialize(Vector3 start, Vector3 end, bool isSpawn)
     {
         base.Initialize(start, end);
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
         Speed = WALK_SPEED;
     }
 
