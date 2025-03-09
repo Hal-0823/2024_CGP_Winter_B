@@ -45,18 +45,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartPerform: 1
-  isEndPerform: 0
+  isOverPerform: 0
+  isFinishPerform: 0
+  isEndPhase: 0
+  isFallen: 0
+  isStart: 1
+  isOver: 1
+  themeColor: {r: 0, g: 0, b: 0, a: 0}
   player: {fileID: 0}
   uiCanvas: {fileID: 0}
   performCamera: {fileID: 0}
-  statementPlayer: {fileID: 0}
   animationPlayer: {fileID: 0}
-  movement_Player: {fileID: 0}
-  uiCanvasPrefab: {fileID: 7463745899133024339, guid: eac7a3a49c31bbf41a839754d74bea11, type: 3}
-  startCanvas: {fileID: 4984204744499121209, guid: 849536b502de84d4d865d05c9366233f, type: 3}
-  endCanvas: {fileID: 4604124173135312987, guid: 27eaf86cdc6bdf342b7a460261af1ef8, type: 3}
-  performManagerPrefab: {fileID: 123175055117251874, guid: 6770a27d095ef9842b8d370464b571da, type: 3}
+  scoreManager: {fileID: 0}
+  stageSystemsPrefab: {fileID: 7115299794171986247, guid: c02da0191463f37409c0fccb18161f21, type: 3}
+  phaseManager: {fileID: 0}
   playerPrefab: {fileID: 1507362512967442089, guid: ba28e9f7c3fdc5f48bc442e8819f33f4, type: 3}
-  phaseManagerPrefab: {fileID: 4864840432535961847, guid: f1cc657ff368a1e42961c6225b6454a8, type: 3}
-  scoreManagerPrefab: {fileID: 171920520806544828, guid: c51bde17ecc29b94d9bd3d77b7e6508b, type: 3}
   performCameraPrefab: {fileID: 8333262770573323854, guid: 628c7b2e2e8d6ec419e2515b340de7ba, type: 3}
+  resultCanvas: {fileID: 8328620987769128302, guid: b33720a3969042545a0b5ff58a56bfdb, type: 3}
+  stageInfo: {fileID: 0}

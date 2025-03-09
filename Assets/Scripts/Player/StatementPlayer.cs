@@ -6,7 +6,7 @@ public class StatementPlayer : Information_Player
     public bool noDamage;
     Movement_Player movement_Player;
     AnimationPlayer animationPlayer;
-    ScoreManager scoreManager;
+    //ScoreManager scoreManager;
     float rollCoolTime = 10f;
     float downTime;
     public Image progressImage;    // 進捗バー（円形）
@@ -19,7 +19,7 @@ public class StatementPlayer : Information_Player
         downTime=0f;
         progressImage = GameObject.Find("RollStaminaFill").GetComponent<Image>();
         progressImage.fillAmount = 1;
-        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        //scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -45,12 +45,12 @@ public class StatementPlayer : Information_Player
             AudioManager.I.PlaySE(SE.Name.BadReaction);
 
             
-            if(scoreManager.GotDamageEffectForScore()<=-5000)
+            if(GameManager.I.scoreManager.GotDamageEffectForScore()<=-5000)
             {
                 //ゲームオーバー処理はここに書く
                 animationPlayer.DeathAnimation();
                 noDamage = true;
-                Destroy(scoreManager.gameObject,1.0f);
+                Destroy(GameManager.I.scoreManager.gameObject,1.0f);
             }
             else
             {
