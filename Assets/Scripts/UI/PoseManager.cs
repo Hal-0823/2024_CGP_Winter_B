@@ -15,14 +15,17 @@ public class PoseManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.P))
         {
-            if(!isPose)
+            if(!isPose && GameManager.I.poseFlag)
             {
                 Time.timeScale = 0; 
                 pose = Instantiate(poseUI,this.transform);
             }
             else if(isPose)
             {
-                Destroy(pose);
+                if(pose != null)
+                {
+                    Destroy(pose);
+                }
                 Time.timeScale = 1.0f; 
             }
             isPose = !isPose;

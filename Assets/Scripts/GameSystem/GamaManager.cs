@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
     private GameObject stageSystems;
     private int score;
     [HideInInspector] public static GameManager I;
-    [HideInInspector] public bool isStartPerform = true, isOverPerform = false, isFinishPerform = false, isEndPhase = false, isFallen = false, isStart = true, isOver = true;
+    [HideInInspector] public bool isStartPerform = true, isOverPerform = false, isFinishPerform = false, isEndPhase = false, isFallen = false, isStart = true, isOver = true, poseFlag = false;
     [HideInInspector] public Color themeColor;
     [HideInInspector] public GameObject player;
     [HideInInspector] public GameObject uiCanvas;
@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
         if(isStart && !isStartPerform)
         {
             GameStart();
+            poseFlag = true;
             isStart = false;
         }
 
@@ -83,11 +84,13 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
             {
                 isOverPerform = true;
                 GameOver();
+                Invoke("ResultAppearOver", 2f);
             }
             if(isEndPhase)
             {
                 isFinishPerform = true;
                 GameOver();
+                Invoke("ResultAppearFinish", 2f);
             }
         }
 
@@ -96,16 +99,24 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
             score = scoreManager.GetScore();
         }
     }
-    public void ResultAppear()
+    public void ResultAppearOver()
     {
         var result = Instantiate(resultCanvas);
 
-        result.Initialize(score, null);
+        result.Initialize(score, "GameOver");
     }
+
+    public void ResultAppearFinish()
+    {
+        var result = Instantiate(resultCanvas);
+
+        result.Initialize(score, "Finish");
+    }
+
     void GameOver()
     {
         isOver = false;
-        Invoke("ResultAppear", 2f);
+        poseFlag = false;
         phaseManager.SetActive(false);
         scoreManagerObj.SetActive(false);
     }
