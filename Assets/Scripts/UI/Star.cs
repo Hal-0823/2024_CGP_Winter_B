@@ -8,11 +8,10 @@ using UnityEngine.UI;
 public class Star : MonoBehaviour
 {
     public bool State { get; private set; }
-    private Image image;
+    public Image image;
 
-    void Start()
+    void Awake()
     {
-        image = GetComponent<Image>();
         SetState(false);
     }
 
