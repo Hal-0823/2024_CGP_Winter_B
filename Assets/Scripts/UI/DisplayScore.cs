@@ -81,7 +81,10 @@ public class DisplayScore : MonoBehaviour
         else
         {scoreText.text = "Score:" + scoreManager.GetScore()+"\nCombo:x"+scoreManager.GetCombo();}
         beforeScore = scoreManager.GetScore();
-        
+        if(scoreSlider.value <= 0)
+        {
+            GameManager.I.isFallen = true;
+        }
     }
 
     void DeleteEffect()

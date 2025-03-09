@@ -20,6 +20,7 @@ public class Result : MonoBehaviour
     {
         Voltage.Initialize();
         targetScore = finalScore;
+        ScoreText.text = "Score: 0";
 
         Animator animator = GetComponent<Animator>();
         animator.SetTrigger(anim);
