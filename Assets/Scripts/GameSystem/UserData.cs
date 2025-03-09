@@ -44,7 +44,7 @@ public class UserData : MonoBehaviour
         }
     }
 
-    public void SaveStageResult(int stageIndex, int starCount, int score)
+    public void SaveStageResult(int stageIndex, int score, int starCount)
     {
         if (stageIndex >= 0 && stageIndex < stageStars.Length)
         {
