@@ -16,13 +16,12 @@ public class UserData : MonoBehaviour
         {
             I = this;
             DontDestroyOnLoad(gameObject); // シーンをまたいでも削除されない
+            Initialize(5);
         }
         else
         {
             Destroy(gameObject);
         }
-
-        Initialize(5);
     }
 
     private void Initialize(int stageCount)
@@ -40,12 +39,14 @@ public class UserData : MonoBehaviour
         for (int i = 0; i < stageStars.Length; i++)
         {
             stageStars[i] = PlayerPrefs.GetInt(StarKey + i, 0); // 星のデータ読み込み
-            bestScores[i] = PlayerPrefs.GetInt(ScoreKey + I, 0); // ベストスコア読み込み
+            bestScores[i] = PlayerPrefs.GetInt(ScoreKey + i, 0); // ベストスコア読み込み
+            Debug.Log($"Load: star{stageStars[i]} bestScore{bestScores[i]}");
         }
     }
 
     public void SaveStageResult(int stageIndex, int score, int starCount)
     {
+        Debug.Log($"Save {stageIndex}, {score}, {starCount}");
         if (stageIndex >= 0 && stageIndex < stageStars.Length)
         {
             stageStars[stageIndex] = Mathf.Max(stageStars[stageIndex], starCount); // 過去の最高記録を保持
