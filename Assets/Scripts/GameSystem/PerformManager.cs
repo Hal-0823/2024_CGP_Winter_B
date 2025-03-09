@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using TMPro;
 
-public class PerformManager : MonoBehaviour
+public class PerformManager : Information_Player
 {
     [SerializeField] private Vector3 cameraStartPos;
     [SerializeField] private Vector3 cameraEndPos;
@@ -47,7 +47,7 @@ public class PerformManager : MonoBehaviour
 
         if(movingFlag)
         {
-            animationPlayer.MoveAnimation(0.06f);
+            animationPlayer.MoveAnimation(playerSpeed);
         }
 
         if (GameManager.I != null && GameManager.I.isOverPerform && hasStarted)
