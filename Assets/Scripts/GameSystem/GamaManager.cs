@@ -54,15 +54,26 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
 
     void Start()
     {
-        var stageInfo = UserData.I.GetCurrentStageInfo();
+        stageInfo = UserData.I.GetCurrentStageInfo();
         themeColor = stageInfo.ThemeColor;
     }
 
     public void GameStart()
     {
         // PhaseManagerとScoreManagerのインスタンス化
+        if(stageInfo.StageIndex == 0 || stageInfo.StageIndex == 2)
+        {
+            AudioManager.I.PlayBGM(BGM.Name.Stage_1);
+        }
+        else if(stageInfo.StageIndex == 1 || stageInfo.StageIndex == 3)
+        {
+            AudioManager.I.PlayBGM(BGM.Name.Stage_2);
+        }
+        else if(stageInfo.StageIndex == 4)
+        {
+            AudioManager.I.PlayBGM(BGM.Name.Stage_3);
+        }
         movement_Player.cantOperate = false;
-        AudioManager.I.PlayBGM(BGM.Name.Stage_1);
         phaseManager.SetActive(true);
         scoreManagerObj.SetActive(true);
         scoreManager = scoreManagerObj.GetComponent<ScoreManager>();
@@ -80,7 +91,7 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
         if(isOver)
         {
             // PerformManagerの終了演出開始
-            if(isFallen || score < -4000)
+            if(isFallen)
             {
                 isOverPerform = true;
                 GameOver();
