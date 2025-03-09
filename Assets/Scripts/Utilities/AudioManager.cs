@@ -44,11 +44,17 @@ public class AudioManager : MonoBehaviour
         // Volumeを初期化　初プレイ時は音量3
         foreach(var param in Enum.GetNames(typeof(VolumeParam)))
         {
-            //SetVolume(param, PlayerPrefs.GetFloat(param.ToString() + "SliderValue", 0));
+            SetVolume(param, PlayerPrefs.GetFloat(param.ToString() + "SliderValue", 3));
             //SetVolume(param, 3);
         }
         //seSlider.value = 3;
         //bgmSlider.value = 3;
+    }
+
+    public float GetVolume(string volumeParam)
+    {
+        float volume = PlayerPrefs.GetFloat(volumeParam + "SliderValue", 3);
+        return volume;
     }
 
     // --------------------------------------------------
@@ -79,23 +85,13 @@ public class AudioManager : MonoBehaviour
 
     public void SetVolume(string volumeParam, float sliderValue)
     {
+        // sliderValueを保存　volumeValueじゃないよ
+        PlayerPrefs.SetFloat(volumeParam + "SliderValue", sliderValue);
+
         sliderValue /= 5;
         float volumeValue =  20 * Mathf.Log10(sliderValue) - 20; // 最大で0dBに調整
         volumeValue = Mathf.Max(-80, volumeValue); // 最低で-100dBに設定
         audioMixer.SetFloat(volumeParam, volumeValue);
-
-        // sliderValueを保存　volumeValueじゃないよ
-        //PlayerPrefs.SetFloat(volumeParam + "SliderValue", sliderValue);
-    }
-
-    public void SetSEVolume()
-    {
-        SetVolume("SE", seSlider.value*2);
-    }
-
-    public void SetBGMVolume()
-    {
-        SetVolume("BGM", bgmSlider.value*2);
     }
 }
 
