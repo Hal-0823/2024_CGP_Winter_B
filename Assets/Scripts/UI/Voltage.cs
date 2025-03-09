@@ -31,6 +31,8 @@ public class Voltage : MonoBehaviour
 
     public int GetBorderScore(int index)
     {
+        if (index >= borderLine.Length) return 9999999;
+        
         return borderLine[index].GetScore();
     }
 }

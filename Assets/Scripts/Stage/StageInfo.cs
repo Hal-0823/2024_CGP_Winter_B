@@ -12,7 +12,7 @@ public class StageInfo : MonoBehaviour
     public int BestScore { get; private set; }
     public int StarNum { get; private set; }
 
-    void OnEnable()
+    void Awake()
     {
         BestScore = UserData.I.GetBestScore(StageIndex);
         StarNum = UserData.I.GetStarCount(StageIndex);

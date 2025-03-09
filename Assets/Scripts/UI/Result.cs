@@ -23,6 +23,16 @@ public class Result : MonoBehaviour
 
         Animator animator = GetComponent<Animator>();
         animator.SetTrigger(anim);
+
+        SaveResult(finalScore);
+    }
+
+    private void SaveResult(int finalScore)
+    {
+        int star = 0;
+        for ( ; finalScore <= Voltage.GetBorderScore(star); star++);
+        var stageInfo = UserData.I.GetCurrentStageInfo();
+        UserData.I.SaveStageResult(stageInfo.StageIndex, finalScore, star);
     }
 
     /// <summary>
