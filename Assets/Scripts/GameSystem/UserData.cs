@@ -76,8 +76,14 @@ public class UserData : MonoBehaviour
         return 0;
     }
 
+    
     public StageInfo GetCurrentStageInfo()
     {
         return currentStageInfo;
+    }
+
+    public void SetCurrentStageInfo(StageInfo stageInfo)
+    {
+        currentStageInfo = stageInfo;
     }
 }

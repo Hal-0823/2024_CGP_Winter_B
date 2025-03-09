@@ -8,6 +8,7 @@ public class StageSelectManager : MonoBehaviour
     public void OnClickPlay()
     {
         StageInfo stage = stageSelector.GetStageInfo();
+        UserData.I.SetCurrentStageInfo(stage);  // UserDataに現在のステージ情報を格納
         AudioManager.I.PlaySE(SE.Name.Click);
         AudioManager.I.StopBGM();
         FadeManager.I.LoadSceneWithFade(stage.SceneName, stage.ThemeColor, 3.0f);
