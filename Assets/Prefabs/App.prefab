@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 3595680634795678200}
   - component: {fileID: 1593492933885216184}
   m_Layer: 0
-  m_Name: UserDataBase
+  m_Name: UserData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,54 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85fac7386fd9bb4b80ea8803f83f76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  STAR: 0
---- !u!1 &4826935169963982786
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6051099017902398017}
-  - component: {fileID: 120992910218969457}
-  m_Layer: 0
-  m_Name: HighScoreRegister
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6051099017902398017
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4826935169963982786}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3721709367561997126}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &120992910218969457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4826935169963982786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eec185d29a44a6418467079099e5607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageNum: 1
-  highScore: 000000000000000000000000000000000000000000000000
-  starNum: 0000000000000000000000000000000000000000
 --- !u!1 &5422512984773680129
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +314,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6051099017902398017}
   - {fileID: 3595680634795678200}
   - {fileID: 5714699898920236321}
   - {fileID: 4818290687499739074}

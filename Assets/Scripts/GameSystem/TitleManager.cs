@@ -10,6 +10,6 @@ public class TitleManager : MonoBehaviour
     {
         AudioManager.I.StopBGM();
         AudioManager.I.PlaySE(SE.Name.Click);
-        FadeManager.I.LoadSceneWithFade("StageSelect", 1f);
+        FadeManager.I.LoadSceneWithFade("StageSelect", Color.black, 1f);
     }
 }

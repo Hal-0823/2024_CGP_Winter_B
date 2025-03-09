@@ -18,7 +18,7 @@ public class Voltage : MonoBehaviour
         var borderScore = BorderScoreTable.GetBorderScores(stageInfo.StageIndex);
         for (int i = 0; i <= 2; i++)
         {
-            float borderX = 800f*(float)(borderScore[0]) / (borderScore[2]);
+            float borderX = 800f*(float)(borderScore[i]) / (borderScore[2]);
             borderLine[i] = Instantiate(BorderLineObj, BackGround.transform);
             borderLine[i].transform.localPosition = new Vector3((borderX-400f), 0, 0);
             borderLine[i].SetScore(borderScore[i]);
@@ -31,7 +31,8 @@ public class Voltage : MonoBehaviour
 
     public int GetBorderScore(int index)
     {
-        if (index >= borderLine.Length) return 9999999;
+        //Debug.Log("StarIndex: " + index.ToString());
+        if (index >= borderLine.Length) return 999999;
         
         return borderLine[index].GetScore();
     }
