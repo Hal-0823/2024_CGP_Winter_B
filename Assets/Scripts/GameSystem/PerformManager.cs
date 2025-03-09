@@ -83,7 +83,9 @@ public class PerformManager : MonoBehaviour
 
     private async UniTask FinishPerformance()
     {
-
+        AudioManager.I.PlaySE(SE.Name.Finish);
+        await UniTask.Delay(2000);
+        await DOTweenHelper.LerpAsync(1f, 0f, 1f, Ease.InOutQuad, (value) => uiCanvasCg.alpha = value);
     }
 
     private async UniTask StartPerformance()

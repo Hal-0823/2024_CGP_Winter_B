@@ -45,12 +45,17 @@ public class GameManager : MonoBehaviour //オブジェクトの生成、非ア�
         
         // PerformManagerのインスタンス化
         performCamera = Instantiate(performCameraPrefab);
-        themeColor = stageInfo.ThemeColor;
 
         // PerformManagerの演出開始フラグを立てる
         phaseManager.SetActive(false);
         scoreManagerObj.SetActive(false);
         isStartPerform = true;
+    }
+
+    void Start()
+    {
+        var stageInfo = UserData.I.GetCurrentStageInfo();
+        themeColor = stageInfo.ThemeColor;
     }
 
     public void GameStart()
