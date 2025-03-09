@@ -26,12 +26,6 @@ public class Phase_V5 : PhaseBase
 
     public override void SpawnEnemy(PhaseManager manager)
     {
-        if (spawnId_v1 >= manager.SpawnPoints.Length)
-        {
-            manager.NextState();
-            return;
-        }
-
         spawnId_v1 = SpawnEnemy_V3(manager, spawnId_v1);
         spawnId_v3 = SpawnEnemy_V3(manager, spawnId_v3);
     }
