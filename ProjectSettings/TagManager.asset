@@ -13,6 +13,7 @@ TagManager:
   - Ice
   - Stage
   - GoldBull
+  - Explosion
   layers:
   - Default
   - TransparentFX

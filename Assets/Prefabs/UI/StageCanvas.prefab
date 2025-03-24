@@ -971,6 +971,7 @@ GameObject:
   - component: {fileID: 8217943984663728194}
   - component: {fileID: 6525575642058118253}
   - component: {fileID: 7626948504059341108}
+  - component: {fileID: -3321756644974581900}
   m_Layer: 5
   m_Name: StageCanvas
   m_TagString: Untagged
@@ -1079,6 +1080,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poseUI: {fileID: 8495873907291968424, guid: 11e2cea30b7201542980c0f5167df4a0, type: 3}
+--- !u!225 &-3321756644974581900
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7731115775604266639}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &9181157206020441571
 GameObject:
   m_ObjectHideFlags: 0

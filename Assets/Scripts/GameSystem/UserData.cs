@@ -1,4 +1,5 @@
 using UnityEngine;
+using unityroom.Api;
 
 public class UserData : MonoBehaviour
 {
@@ -56,7 +57,26 @@ public class UserData : MonoBehaviour
             PlayerPrefs.SetInt(ScoreKey + stageIndex, bestScores[stageIndex]);
 
             PlayerPrefs.Save(); // 保存を確定
+
+            // unityroomランキング登録
+            SendScore();
         }
+    }
+
+    // Unityroomのランキング登録用
+    private void SendScore()
+    {
+        int allStars = 0;
+        int allScores = 0;
+
+        for (int i=0; i<stageStars.Length; i++)
+        {
+            allStars += GetStarCount(i);
+            allScores += GetBestScore(i);
+        }
+
+        UnityroomApiClient.Instance.SendScore(1, allStars, ScoreboardWriteMode.HighScoreDesc);
+        UnityroomApiClient.Instance.SendScore(2, allScores, ScoreboardWriteMode.HighScoreDesc);
     }
 
     public int GetStarCount(int stageIndex)

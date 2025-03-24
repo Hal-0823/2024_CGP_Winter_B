@@ -16,5 +16,14 @@ public class VolumeSlider : MonoBehaviour
     public void OnValueChanged()
     {
         AudioManager.I.SetVolume(VolumeParam, slider.value);
+        if (VolumeParam.Equals("BGM"))
+        {
+            AudioManager.I.PlaySE(SE.Name.Click, AudioManager.I.BGMSource);
+        }
+        else
+        {
+            AudioManager.I.PlaySE(SE.Name.Click);
+        }
+        
     }
 }

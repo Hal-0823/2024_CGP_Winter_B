@@ -7201,7 +7201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -8901,7 +8901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -9021,7 +9021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -9459,7 +9459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -9799,7 +9799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -10298,19 +10298,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 457909098464082117, guid: db1ee7a2598c59e44adcebe19f2500e7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.16171359
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 457909098464082117, guid: db1ee7a2598c59e44adcebe19f2500e7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 457909098464082117, guid: db1ee7a2598c59e44adcebe19f2500e7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.98683774
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 457909098464082117, guid: db1ee7a2598c59e44adcebe19f2500e7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 457909098464082117, guid: db1ee7a2598c59e44adcebe19f2500e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10318,7 +10318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 457909098464082117, guid: db1ee7a2598c59e44adcebe19f2500e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -198.613
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 457909098464082117, guid: db1ee7a2598c59e44adcebe19f2500e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10426,7 +10426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -10472,7 +10472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -10846,7 +10846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -10945,7 +10945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -11143,7 +11143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -11221,7 +11221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -11327,7 +11327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -11614,7 +11614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -11725,7 +11725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -11791,7 +11791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -11958,7 +11958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -12084,7 +12084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -12251,7 +12251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -12362,7 +12362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -12525,7 +12525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -12571,7 +12571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -12669,7 +12669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -12747,7 +12747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -12889,7 +12889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -12942,7 +12942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -12988,7 +12988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -13041,7 +13041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -13242,7 +13242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -13295,7 +13295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -13406,7 +13406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -13570,7 +13570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -13698,7 +13698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -13861,7 +13861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -13944,7 +13944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -13997,7 +13997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -14160,7 +14160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -14213,7 +14213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -14366,7 +14366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -14432,7 +14432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -14505,7 +14505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -14551,7 +14551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -14609,7 +14609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -14692,7 +14692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -14798,7 +14798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -14950,7 +14950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15048,7 +15048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15189,7 +15189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15247,7 +15247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15348,7 +15348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15549,7 +15549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15607,7 +15607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15680,7 +15680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15726,7 +15726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15772,7 +15772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15870,7 +15870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -15923,7 +15923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16157,7 +16157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16203,7 +16203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16261,7 +16261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16412,7 +16412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16503,7 +16503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16556,7 +16556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16639,7 +16639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16685,7 +16685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16803,7 +16803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16849,7 +16849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16895,7 +16895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16953,7 +16953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -16999,7 +16999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17097,7 +17097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17150,7 +17150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17223,7 +17223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17306,7 +17306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17389,7 +17389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17442,7 +17442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17488,7 +17488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17550,7 +17550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17608,7 +17608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17691,7 +17691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17744,7 +17744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17802,7 +17802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17860,7 +17860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17943,7 +17943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -17989,7 +17989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18047,7 +18047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18130,7 +18130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18188,7 +18188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18271,7 +18271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18344,7 +18344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18427,7 +18427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18485,7 +18485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18568,7 +18568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18626,7 +18626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18724,7 +18724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18770,7 +18770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18816,7 +18816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18862,7 +18862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18920,7 +18920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -18966,7 +18966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19049,7 +19049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19130,7 +19130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19213,7 +19213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19259,7 +19259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19325,7 +19325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19383,7 +19383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19444,7 +19444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19527,7 +19527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19585,7 +19585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19638,7 +19638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19751,7 +19751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19834,7 +19834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19887,7 +19887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -19945,7 +19945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20036,7 +20036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20082,7 +20082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20135,7 +20135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20193,7 +20193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20239,7 +20239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20285,7 +20285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20411,7 +20411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20469,7 +20469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20552,7 +20552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20610,7 +20610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20663,7 +20663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20746,7 +20746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20792,7 +20792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20850,7 +20850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20908,7 +20908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -20966,7 +20966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -21049,7 +21049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -21102,7 +21102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -21160,7 +21160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -21218,7 +21218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -21264,7 +21264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -21347,7 +21347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -21400,7 +21400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
@@ -21458,7 +21458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61631c19a423d0a4bb68b37eebff028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descendSpeed: 4
+  descendSpeed: 2.6
   firstDescendRange: 0.1
   waitTime: 2
   accel: 1.8
