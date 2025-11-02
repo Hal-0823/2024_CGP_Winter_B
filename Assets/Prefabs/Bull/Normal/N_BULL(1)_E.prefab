@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHitWallAction: {fileID: 11400000, guid: 9e359b8e5f5225747b9cfb9cea849f6f, type: 2}
-  Speed: 5.2
+  Speed: 5.4
 --- !u!64 &2376264092013660330
 MeshCollider:
   m_ObjectHideFlags: 0

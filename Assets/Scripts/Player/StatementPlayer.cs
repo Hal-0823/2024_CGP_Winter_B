@@ -39,7 +39,7 @@ public class StatementPlayer : Information_Player
     }
     void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("Enemy")&&!noDamage)
+        if ((col.CompareTag("Enemy") || col.CompareTag("Explosion"))&&!noDamage)
         {
             movement_Player.GotDamage();
             AudioManager.I.PlaySE(SE.Name.BadReaction);

@@ -128,12 +128,10 @@ public class PerformManager : Information_Player
         DOTweenHelper.LerpAsync(4f, 3f, 0.3f, Ease.InOutQuad, (value) => startTextGoRt.localScale = Vector3.one * value);
         DOTweenHelper.LerpAsync(1f, 0f, 0.3f, Ease.InOutQuad, (value) => startTextGoCg.alpha = value);
 
+        GameManager.I.isStartPerform = false;
+        
         // UiCanvasのフェードイン
         uiCanvasCg.alpha = 0f;
-        await DOTweenHelper.LerpAsync(0f, 1f, 1f, Ease.InOutQuad, (value) => uiCanvasCg.alpha = value);
-
-        GameManager.I.isStartPerform = false;
+        await DOTweenHelper.LerpAsync(0f, 1f, 1f, Ease.InOutQuad, (value) => uiCanvasCg.alpha = value);        
     }
-
-
 }

@@ -76,7 +76,7 @@ public class Result : MonoBehaviour
     {
         AudioManager.I.PlaySE(SE.Name.Click);
         AudioManager.I.StopBGM();
-        FadeManager.I.LoadSceneWithFade("Title");
+        FadeManager.I.LoadSceneWithFade("StageSelect");
     }
 
     public void OnClickRetry()
